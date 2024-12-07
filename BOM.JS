@@ -25,10 +25,10 @@ function start(){
 
     let ans= window.confirm ("Are you ok?")
     if(ans==true){
-        window.alert("yes")
+        window.alert("yes I'm Ok")
     }
     else{
-        window.alert("no")
+        window.alert("no I'm not Ok")
     }
 }
 
