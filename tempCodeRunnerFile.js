@@ -1,0 +1,5 @@
+    // document.write(text4.replace("java", "Function")) 
+    // document.write(text4.replace(/java/i, "Function"))
+    // document.write(text4.replace(/java/g, "Function"))
+    // document.write(text4.replace(/java/ig, "Function"))
+    // document.write(text4.replaceAll("java", "Function"))
