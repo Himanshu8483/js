@@ -40,6 +40,19 @@ function okk(){
     // let ans1= arr1.sort().reverse()    // dessending order
     // document.write(ans1)
 
-    
+    let arr2= [5,7,8]
+    let ans= arr1.concat(arr2)
+    ans.sort()
+    document.write(ans)
+
 }
 // okk();
+
+function start(){
+    // document.querySelector
+    let show = document.getElementById("text")
+    // show.textContent="It's Coming"
+    show.innerHTML= "<h1> Its Come </h1>"
+    // show.style.color="red";
+
+}
