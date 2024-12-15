@@ -1,3 +1,41 @@
+
+// 'use strict'    
+
+var num1=56;
+console.log(num1)
+
+num3=77;
+console.log(num3)
+
+var a=55;
+console.log(a)
+console.log(typeof(a))
+
+var b="1";
+console.log(typeof(b))
+var c=true;
+console.log(typeof(c))
+var d;
+console.log(typeof(d))
+var e=null;
+console.log(typeof(e))
+
+var num=1n;
+var num2=2n;
+console.log(num + num2)
+console.log(typeof(num))
+
+var n =2 ;
+var N ='3';
+console.log(n + N); //string taken priority and concatinate for plus sign only and for other operatioh auto convert on numbers
+console.log(n + parseInt(N)); // number taken priority
+console.log(n - N);
+console.log(n * N);
+console.log(n / N);
+console.log(n % N);
+
+
+
 // 04 dec 
 // var num1 =55;
 // var num2=66;
@@ -6,7 +44,7 @@
 // function okk(){
 //     var pera=document.querySelector("#name")
 //     pera.innerHTML="Hello Jatin";
-//     pera.style.color="red"
+//     pera.style.color="red";
 // }
 
 // 05 dec 

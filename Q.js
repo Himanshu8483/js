@@ -13,14 +13,14 @@ function start(){
     // alert("Not Completed")
     // }
     // 3.
-    let price= prompt("Enter Price");
-    let discount= confirm ("Are you have a discount coupon");
-    if (discount==true) {
-        alert("10% Discount" + price*.9);
-    }
-    else {
-        alert(price);
-    }
+    // let price= prompt("Enter Price");
+    // let discount= confirm ("Are you have a discount coupon");
+    // if (discount==true) {
+    //     alert("10% Discount" + price*.9);
+    // }
+    // else {
+    //     alert(price);
+    // }
     // 4.
     // let score= prompt("Enter Percentage");
     // if(score>=33 && score<=100)
