@@ -5,7 +5,7 @@ let obj={
     name:"Himanshu",
     age:25,
     city:"Bhopal",
-    name:"Him" ,     // key unique will overwrite upper-one
+    name:"Him" ,     // same key will overwrite upper-one
 
     welcome: function(){
         console.log(`Welcome ${this.name} to ${this.city} home`);
