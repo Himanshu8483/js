@@ -76,7 +76,7 @@ let add=()=>{
 let sub=()=>{
     let show= document.querySelector("#num");
     if(counter>5){
-    counter*2;
+    counter--;
     show.style.fontSize=counter+"px"
     }
 
@@ -87,7 +87,7 @@ let reset=()=>{
     show.style.fontSize=counter+"px"
 }
 
-// ===================\
+// ===================
 let run=()=>{
     let show=document.querySelector("#run").value;
     let give= document.querySelector("#par")
