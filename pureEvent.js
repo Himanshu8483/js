@@ -15,24 +15,40 @@ btn.addEventListener("mouseenter", ()=>{      // for hover
     // })
 
     // // input live print on page 
-    // let inp=document.querySelector("#inp")
-    // inp.addEventListener("input", ()=>{
-    // let show=document.querySelector("#show")
-    // show.innerHTML=inp.value
-    // })
+    let inp=document.querySelector("#inp")
+    inp.addEventListener("input", ()=>{
+    let show=document.querySelector("#show")
+    show.innerHTML=inp.value
+    })
 
     let inp1=document.querySelector("#red")
-    inp1.addEventListener("click", ()=>{
+    inp1.addEventListener("mouseenter", ()=>{
         let show=document.querySelector(".box")
         show.style.backgroundColor="red";
     })
+    inp1.addEventListener("mouseleave", ()=>{
+        let show=document.querySelector(".box")
+        show.style.backgroundColor="aqua";  
+    })
     let inp2=document.querySelector("#yellow")
-    inp2.addEventListener("click", ()=>{
+    inp2.addEventListener("mouseenter", ()=>{
         let show=document.querySelector(".box")
         show.style.backgroundColor="yellow";
     })
     let inp3=document.querySelector("#green")
-    inp3.addEventListener("click", ()=>{
+    inp3.addEventListener("mouseenter", ()=>{
         let show=document.querySelector(".box")
         show.style.backgroundColor="green";
     })
+
+    // question home =======
+    let button=document.querySelector("#btn")
+    button.addEventListener("click", ()=>{
+        let div=document.querySelector(".boxx")
+        div.style.backgroundColor="blue";
+    })
+    button.addEventListener("dblclick", ()=>{
+        let div2=document.querySelector(".boxx")
+        // div2.style.backgroundColor="red";   
+        div2.style.display="none"
+    }) 
