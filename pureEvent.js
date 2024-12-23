@@ -44,11 +44,17 @@ btn.addEventListener("mouseenter", ()=>{      // for hover
     // question home =======
     let button=document.querySelector("#btn")
     button.addEventListener("click", ()=>{
-        let div=document.querySelector(".boxx")
-        div.style.backgroundColor="blue";
+        let div=document.querySelector("#par")
+        if(div.style.display=="none"){
+            div.style.display="block";
+        button.innerHTML="hide";
+
+
+        }
+        else{
+            div.style.display="none";
+            button.innerHTML="show";
+        }
+        
     })
-    button.addEventListener("dblclick", ()=>{
-        let div2=document.querySelector(".boxx")
-        // div2.style.backgroundColor="red";   
-        div2.style.display="none"
-    }) 
+
