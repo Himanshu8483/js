@@ -24,9 +24,12 @@ let submitt=()=>{
         errname.style.fontSize="30px"
         return false;
     }
+    
 
+    // is not a number = "abc" // true => if condition run
+    // is not a number = "123" // false => if condition not run
       // Number validation
-    else if (isNaN(number) || number.length !== 10) {
+    else if (number==="" || isNaN(number) || number.length !== 10) {
         errnumber.innerHTML = "Please enter a valid 10-digit number";
         errnumber.style.color = "red";
         return false;
@@ -37,13 +40,18 @@ let submitt=()=>{
         erremail.innerHTML="Please enter your email";
         return false;
     }
+    // include check every value present in input 
+    else if(!(email.includes("@") && email.includes(".com"))){
+        erremail.innerHTML="please enter valid id"
+        return false;
+    }
 
        // Password validation
     else if(pass === "") {
         errpass.innerHTML = "Password is required";
         return false;
     } 
-    else if(pass.length < 6) {
+    else if(pass.length < 6 ) {
         errpass.innerHTML = "Password must be at least 6 characters";
         return false;
     }
@@ -56,6 +64,17 @@ let submitt=()=>{
         else if (cpass !== pass) {
             errcpass.innerHTML = "Passwords do not match";
             errcpass.style.color = "red";
+            return false;
+        }
+    // match check any value present in input will be true 
+        else if (!(
+            pass.match(/[1234567890]/) && 
+            pass.match(/[!@#$%^&*]/) &&
+            pass.match(/[a-z]/) &&
+            pass.match(/[A-Z]/)
+
+        )){
+            errpass.innerHTML="Password should have num, symbol, capital & small letters";
             return false;
         }
     
