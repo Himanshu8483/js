@@ -16,6 +16,7 @@ console.log(typeof(f))     // bigint
 var g=Symbol("string");
 console.log(typeof(g))      // symbol
 
+
 // ARITHMETIC OPERATOR
 var n =2 ;
 var N ='3';
