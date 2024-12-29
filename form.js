@@ -25,10 +25,9 @@ let submitt=()=>{
         return false;
     }
     
-
     // is not a number = "abc" // true => if condition run
     // is not a number = "123" // false => if condition not run
-      // Number validation
+      // Number validation  
     else if (number==="" || isNaN(number) || number.length !== 10) {
         errnumber.innerHTML = "Please enter a valid 10-digit number";
         errnumber.style.color = "red";
