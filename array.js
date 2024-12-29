@@ -51,6 +51,7 @@ function okk(){
 }
 // okk();
 
+
 function start(){
     // let show = document.querySelector("#text")
     // let show = document.getElementById("text")
@@ -64,10 +65,12 @@ function start(){
     // let ans = a.slice(0,-2)    // give all except last elements remove
     // document.write(ans)
 
+
     // a.splice(2,3,20,17,18);            // 3 parameters : from where to add, how many to delete, what to add 
     // document.write(a)
 
-    // map =========================================
+
+    // map ============================================
     // let ans= a.map(function(num) {
     //     return num*2;
     // })

@@ -16,6 +16,7 @@ console.log(typeof(f))     // bigint
 var g=Symbol("string");
 console.log(typeof(g))      // symbol
 
+
 // ARITHMETIC OPERATOR
 var n =2 ;
 var N ='3';
@@ -106,10 +107,11 @@ function bom(){
 }
 bom();    
 
+
 // PRACTICE SET 1.
 function loop(){ 
     // Question 1: Ask the user of their age and if it is greater than or equals to 18 with Ternary operator and display the result in alert.
-    let age=prompt("Enter Age")
+    let age=prompt("Enter your Age")
     age>=18 ? alert("Adult") : alert("Child") 
     // or
     let age=prompt("Enter Age")
