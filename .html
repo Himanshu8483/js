@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interval Example</title>
+</head>
+<body>
+    <div id="output"></div> <!-- This is where "Running" will be displayed -->
+
+    <script>
+        let counter = 0; // Initialize a counter
+
+        let enter = setInterval(() => {
+            const outputDiv = document.getElementById("output"); // Get the output div
+            const newMessage = document.createElement("p"); // Create a new paragraph
+            newMessage.textContent = "Running"; // Set the text content
+            outputDiv.appendChild(newMessage); // Append the paragraph to the output div
+
+            counter++; // Increment the counter each time the callback runs
+
+            if (counter >= 6) { // Stop the interval after 6 executions
+                clearInterval(enter);
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
