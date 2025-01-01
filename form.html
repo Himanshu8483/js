@@ -3,28 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form Validation</title>
+    <style>
+        /* Basic styling for error messages and inputs */
+        input[type="text"], input[type="password"] {
+            padding: 8px;
+            margin: 5px;
+            width: 250px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        p {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
     <form align="center">
-    <p id="errorname"></p>
-    Enter Name:- <input type="text" id="inpname">   <br><br>
+        <!-- Name Input -->
+        <p id="errorname"></p>
+        Enter Name: <input type="text" id="inpname" required><br><br>
 
-    <p id="errornum"></p>
-    Enter Number:- <input type="text" id="inpnum"><br><br>
+        <!-- Number Input -->
+        <p id="errornum"></p>
+        Enter Number: <input type="text" id="inpnum" required><br><br>
 
-    <p id="erroremail"></p>
-    Enter Email:- <input type="text" id="inpemail"> <br> <br>
+        <!-- Email Input -->
+        <p id="erroremail"></p>
+        Enter Email: <input type="text" id="inpemail" required><br><br>
 
-    <p id="errorpass"></p>
-    Enter Password:- <input type="text" id="inppass"> <br><br>
+        <!-- Password Input -->
+        <p id="errorpass"></p>
+        Enter Password: <input type="password" id="inppass" required><br><br>
 
-    <p id="errorcpass"></p>
-    Enter C Pass:- <input type="text" id="inpcpass"> <br><br>
-  
-    <input type="submit" value="Login" onclick="return submitt()">
+        <!-- Confirm Password Input -->
+        <p id="errorcpass"></p>
+        Enter Confirm Password: <input type="password" id="inpcpass" required><br><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit" onclick="return submitt()">
     </form>
-    
+
     <script src="form.js"></script>
 </body>
 </html>

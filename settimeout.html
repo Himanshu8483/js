@@ -3,32 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JavaScript Timer Example</title>
     <style>
-        div{
+        /* Styling for the div elements */
+        div {
             height: 300px;
             width: 300px;
-            background-color: aquamarine;
+            background-color: aquamarine;  /* Light blue color */
         }
     </style>
 </head>
 <body>
+    <!-- Button to trigger a function that will be defined in JavaScript -->
     <button onclick="startt()">click</button>
 
+    <!-- A div with id "click" that can be targeted and manipulated in JavaScript -->
     <div id="click"></div>
+
+    <!-- Button to trigger a function that changes the background color of the "click" div -->
     <button onclick="okk()">Click Me!</button>
 
+    <!-- Button to start a counter that will decrease over time -->
     <button onclick="inc()">clickey</button>
-    <p id="increase">Hello Himanshu</p>
+    <p id="increase">Hello Himanshu</p> <!-- Paragraph to display the counter -->
 
+    <!-- A div with id "target" for showing the counter -->
     <div id="target"></div>
 
+    <!-- Paragraph with id "text" for dynamic text manipulation -->
     <p id="text"></p>
 
+    <!-- Input field to input a number for a countdown timer -->
     <input id="inp" type="number">
+
+    <!-- Button to start the countdown timer based on the number entered -->
     <button onclick="run()">Start</button>
+
+    <!-- Header to display the countdown number -->
     <h1 id="num"></h1>
     
+    <!-- Link to the external JavaScript file that handles the functionality -->
     <script src="settimeout.js"></script>
 </body>
 </html>

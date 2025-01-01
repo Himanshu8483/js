@@ -1,4 +1,6 @@
-console.log("Hello there is \nHimanshu \t Kushwhaha\"s JS")       // \n : new line, \t: tab
+console.log("Hello there is \nHimanshu \t Kushwhaha\"s JS")    // Output: Himanshu         Kushwhaha"s JS
+// \n : new line, \t: tab 
+
 // PRIMITIVE DATA TYPES 
 var a=55;
 console.log(a)
@@ -15,7 +17,6 @@ var f=5n;
 console.log(typeof(f))     // bigint    
 var g=Symbol("string");
 console.log(typeof(g))      // symbol
-
 
 // ARITHMETIC OPERATOR
 var n =2 ;
@@ -358,7 +359,7 @@ let val = sum2(5,6);       // 11
 console.log(val);           // use anywhere by storing in variable    
 console.log(sum2(4,6))         // 10
 
-// ARROW FUNCTION   (use for small work) 
+// ARROW FUNCTION  
 let arrowSum = (a, b) => {       // store as variable
     console.log(a+b); 
 }
@@ -606,16 +607,16 @@ let obj={
 }
 obj.welcome();  // to call a function
 console.log(obj.fruits[1]);
-// console.log(arr[1]);    // array access
-// console.log(obj.name);  // object access
+console.log(arr[1]);    // array access
+console.log(obj.name);  // object access
 
-// obj.email="himanshukushwahabkp@gmail.com";      // to insert data from outside
-// console.log(obj);   // to see updated object
+obj.email="himanshukushwahabkp@gmail.com";      // to insert data from outside
+console.log(obj);   // to see updated object
 
-// delete obj.city;    // to delete data by key.name
-// console.log(obj);
+delete obj.city;    // to delete data by key.name
+console.log(obj);
 
-// obj.welcome();      // to call a function
+obj.welcome();      // to call a function
 
 
 // Destructuring of Objects

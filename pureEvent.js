@@ -1,60 +1,51 @@
-let btn = document.querySelector("#btn1")
+// Button hover event to change the button text and disable it
+let btn = document.querySelector("#btn1");
 
-// btn.addEventListener("click", ()=>{      // or dblclick for work in double click
-btn.addEventListener("mouseenter", ()=>{      // for hover
-    // alert("Button Clicked")
+btn.addEventListener("mouseenter", () => {  // Trigger on mouse hover (mouseenter)
+    btn.innerHTML = "Disable Button";      // Change the text of the button
+    console.log("hovered");
+    btn.disabled = true;                   // Disable the button after hovering
+});
 
-    btn.innerHTML="Disable Button"
-    console.log("clicked");
-    btn.disabled=true;         // disable after use 
-})
+// Live input update in a paragraph
+let inp = document.querySelector("#inp");
+inp.addEventListener("input", () => {
+    let show = document.querySelector("#show");
+    show.innerHTML = inp.value;           // Display the input value live in the paragraph
+});
 
-    // let inp=document.querySelector("#inp")
-    // inp.addEventListener("keydown", (e)=>{
-    //     console.log(e.key);
-    // })
+// Changing background color of a div based on button hover
+let inp1 = document.querySelector("#red");
+inp1.addEventListener("mouseenter", () => {
+    let show = document.querySelector(".box");
+    show.style.backgroundColor = "red";    // Change color to red when hovering over the red button
+});
+inp1.addEventListener("mouseleave", () => {
+    let show = document.querySelector(".box");
+    show.style.backgroundColor = "aqua";   // Reset color when mouse leaves
+});
 
-    // // input live print on page 
-    let inp=document.querySelector("#inp")
-    inp.addEventListener("input", ()=>{
-    let show=document.querySelector("#show")
-    show.innerHTML=inp.value
-    })
+let inp2 = document.querySelector("#yellow");
+inp2.addEventListener("mouseenter", () => {
+    let show = document.querySelector(".box");
+    show.style.backgroundColor = "yellow"; // Change color to yellow when hovering over the yellow button
+});
 
-    let inp1=document.querySelector("#red")
-    inp1.addEventListener("mouseenter", ()=>{
-        let show=document.querySelector(".box")
-        show.style.backgroundColor="red";
-    })
-    inp1.addEventListener("mouseleave", ()=>{
-        let show=document.querySelector(".box")
-        show.style.backgroundColor="aqua";  
-    })
-    let inp2=document.querySelector("#yellow")
-    inp2.addEventListener("mouseenter", ()=>{
-        let show=document.querySelector(".box")
-        show.style.backgroundColor="yellow";
-    })
-    let inp3=document.querySelector("#green")
-    inp3.addEventListener("mouseenter", ()=>{
-        let show=document.querySelector(".box")
-        show.style.backgroundColor="green";
-    })
+let inp3 = document.querySelector("#green");
+inp3.addEventListener("mouseenter", () => {
+    let show = document.querySelector(".box");
+    show.style.backgroundColor = "green";  // Change color to green when hovering over the green button
+});
 
-    // question home =======
-    let button=document.querySelector("#btn")
-    button.addEventListener("click", ()=>{
-        let div=document.querySelector("#par")
-        if(div.style.display=="none"){
-            div.style.display="block";
-        button.innerHTML="hide";
-
-
-        }
-        else{
-            div.style.display="none";
-            button.innerHTML="show";
-        }
-        
-    })
-
+// Show/hide a paragraph when clicking a button
+let button = document.querySelector("#btn");
+button.addEventListener("click", () => {
+    let div = document.querySelector("#par");
+    if (div.style.display == "none") {
+        div.style.display = "block";  // Show the paragraph if it's hidden
+        button.innerHTML = "Hide";    // Change button text to "Hide"
+    } else {
+        div.style.display = "none";   // Hide the paragraph if it's shown
+        button.innerHTML = "Show";    // Change button text to "Show"
+    }
+});

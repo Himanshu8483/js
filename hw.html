@@ -5,44 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="hw.css">
+    <!-- External CSS file linked for styling -->
 </head>
 <body>
-    <!-- Que 1 -->
-    <!-- <div onclick="box()" class="box">box</div>
+    <!-- Que 1 - Buttons to change box background color and display text -->
+    <div onclick="box()" class="box">box</div>
     <div class="button">
         <button onclick="red()">For Red</button>
         <button onclick="green()">For Green</button>
         <button onclick="blue()">For Blue</button>
-    </div> -->
-    <!-- Que 2 -->
-    <!-- <div id="box"></div>
+    </div>
+    
+    <!-- Que 2 - Changing background images of the box when clicked -->
+    <div id="box"></div>
     <div id="div">
         <div onclick="div1()" class="div1"></div>
         <div onclick="div2()" class="div2"></div>
         <div onclick="div3()" class="div3"></div>
-    </div> -->
+    </div>
 
-    <!-- =============== -->
+    <!-- Changing properties of #box2 with hover -->
+    <!-- When mouse enters, box will rotate and change color, on mouse leave, it will reset -->
     <div onmouseenter="go()" id="box2" onmouseleave="back()"></div>
 
-    <!-- ================== -->
-
+    <!-- Button that shows/hides the box when clicked -->
     <button onclick="go()">Hello Everyone</button>
     <div id="box">hello</div>
 
-    
-<p id="num">Hello World!</p>
-<button onclick="add()">Increase</button>
-<button onclick="sub()">Decrease</button>
-<button onclick="reset()">Reset</button>
+    <!-- Increase, Decrease, Reset font size with buttons -->
+    <p id="num">Hello World!</p>
+    <button onclick="add()">Increase</button>
+    <button onclick="sub()">Decrease</button>
+    <button onclick="reset()">Reset</button>
 
+    <!-- Input box to take user input and show it in the paragraph -->
+    <input type="text" name="" id="run">
+    <button onclick="run()">Hello World!</button>
+    <p id="par" ></p>
 
-<!-- =============== -->
- <input type="text" name="" id="run">
- <button onclick="run()">Hello World!</button>
- <p id="par" ></p>
-<script src="hw.js"></script>
-
+    <!-- External JavaScript file linked to implement functionality -->
+    <script src="hw.js"></script>
 
 </body>
 </html>

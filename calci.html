@@ -7,12 +7,15 @@
 </head>
 <body>
 
+    <!-- Table structure for the calculator layout -->
     <table border="1" align="center" cellspacing="20px" cellpadding="10px">
         
+        <!-- Display area to show the current calculation -->
         <tr>
-            <td id="display" colspan="4" ></td>
+            <td id="display" colspan="4"></td> <!-- This will show the calculation result -->
         </tr>
 
+        <!-- Row for number buttons (1 to 4) -->
         <tr>
             <td onclick="cal('1')">1</td>
             <td onclick="cal('2')">2</td>
@@ -20,6 +23,7 @@
             <td onclick="cal('4')">4</td>
         </tr>
 
+        <!-- Row for number buttons (5 to 8) -->
         <tr>
             <td onclick="cal('5')">5</td>
             <td onclick="cal('6')">6</td>
@@ -27,6 +31,7 @@
             <td onclick="cal('8')">8</td>
         </tr>
        
+        <!-- Row for number buttons (9, 0, 00, and decimal point) -->
         <tr>
             <td onclick="cal('9')">9</td>
             <td onclick="cal('0')">0</td>
@@ -34,25 +39,25 @@
             <td onclick="cal('.')">.</td>
         </tr>
 
+        <!-- Row for operation buttons (-, empty space, %, and division) -->
         <tr>
             <td onclick="cal('-')">-</td>
-            <td onclick="cal('')"></td>
+            <td onclick="cal('')"></td> <!-- Empty space (no operation) -->
             <td onclick="cal('%')">%</td>
             <td onclick="cal('/')">/</td>
         </tr>
 
+        <!-- Row for function buttons (del, AC, =, and addition) -->
         <tr>
-            <td onclick="del()">del</td>
-            <td onclick="ac()">AC</td>
-            <td onclick="result()">=</td>
-            <td onclick="cal('+')">+</td>
+            <td onclick="del()">del</td> <!-- Deletes the last character -->
+            <td onclick="ac()">AC</td> <!-- Clears the display -->
+            <td onclick="result()">=</td> <!-- Displays the result -->
+            <td onclick="cal('+')">+</td> <!-- Adds a "+" to the calculation -->
         </tr>
-
-       
 
     </table>
     
-
+    <!-- JavaScript file for calculator logic -->
     <script src="calci.js"></script>
 </body>
 </html>
