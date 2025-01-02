@@ -33,3 +33,10 @@ let ac = () => {
     store = "";  // Reset the store string to empty
     show.innerHTML = store;  // Clear the display area
 }
+
+// Function to perform Square of number
+let sq = () => {
+    let show = document.querySelector("#display");
+    store = store*store // Square the number 
+    show.innerHTML = store;
+};

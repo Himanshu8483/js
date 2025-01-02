@@ -35,24 +35,24 @@
         <tr>
             <td onclick="cal('9')">9</td>
             <td onclick="cal('0')">0</td>
-            <td onclick="cal('00')">00</td>
+            <td onclick="cal('+')">+</td>
             <td onclick="cal('.')">.</td>
         </tr>
 
         <!-- Row for operation buttons (-, empty space, %, and division) -->
         <tr>
             <td onclick="cal('-')">-</td>
-            <td onclick="cal('')"></td> <!-- Empty space (no operation) -->
+            <td onclick="cal('*')">*</td> 
             <td onclick="cal('%')">%</td>
             <td onclick="cal('/')">/</td>
         </tr>
 
-        <!-- Row for function buttons (del, AC, =, and addition) -->
+        <!-- Row for function buttons (del, AC, =) -->
         <tr>
             <td onclick="del()">del</td> <!-- Deletes the last character -->
             <td onclick="ac()">AC</td> <!-- Clears the display -->
             <td onclick="result()">=</td> <!-- Displays the result -->
-            <td onclick="cal('+')">+</td> <!-- Adds a "+" to the calculation -->
+            <td onclick="sq()">x²</td> <!-- Square the number -->
         </tr>
 
     </table>
