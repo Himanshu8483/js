@@ -8,7 +8,7 @@ setInterval(current, 1000);
 
 let setAlarm = () => {
     let alarmTime = document.querySelector("#alarm").value;     // 12:05
-     setInterval(()=>{
+    let int= setInterval(()=>{
         let show = document.querySelector("#message"); 
     show.innerHTML = `Alarm set for ${alarmTime}`; 
         let time=new Date() // object
@@ -21,7 +21,8 @@ let setAlarm = () => {
 
             setTimeout(()=>{
                 document.querySelector("#ring").pause()
-                // show.innerHTML="Stop Alarm"
+                clearInterval(int)
+                show.innerHTML="Stop Alarm"
             },6000)
         }
     
