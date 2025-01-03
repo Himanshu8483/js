@@ -3,15 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Date and Age Example</title>
 </head>
 <body>
+    <!-- Button to display the current day -->
     <button onclick="timee()">Click Me!</button>
+    <!-- This paragraph will display the day name -->
     <p id="target"></p>
 
+    <!-- Input box to enter your birth year -->
     <input type="text" id="text">
+    <!-- Button to calculate age -->
     <button onclick="age()">Age</button>
-    <p id="show"></p>
+    <!-- This paragraph will display the calculated age -->
+    <p id="totalAge"></p>
+
+    <!-- Digital Clock -->
+    <h1 id="display"></h1> <!-- Displays the digital clock -->
+    <h1 id="time"></h1> <!-- Displays the current time -->
+
+    <!-- Alarm -->
+    <input type="time" id="alarm"> <!-- Input for alarm time -->
+    <button onclick="setAlarm()">Set Alarm</button> <!-- Button to set the alarm -->
+    <p id="message"></p> <!-- Displays the alarm set message -->
+
+    <!-- Link to the JavaScript file -->
     <script src="date.js"></script>
 </body>
 </html>
