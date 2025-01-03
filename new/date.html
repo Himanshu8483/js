@@ -22,10 +22,12 @@
     <h1 id="display"></h1> <!-- Displays the digital clock -->
     <h1 id="time"></h1> <!-- Displays the current time -->
 
-    <!-- Alarm -->
-    <input type="time" id="alarm"> <!-- Input for alarm time -->
-    <button onclick="setAlarm()">Set Alarm</button> <!-- Button to set the alarm -->
-    <p id="message"></p> <!-- Displays the alarm set message -->
+    <!-- Alarm Functionality  -->
+    <h1 id="time"></h1>  <!-- Heading to display the current time -->
+    <input type="time" id="alarm">  <!-- Input field for setting the alarm time -->
+    <button onclick="setAlarm()">Set Alarm</button>  <!-- Button to trigger the setAlarm function -->
+    <h1 id="message"></h1>  <!-- Heading to show alarm messages -->
+    <audio src="audio.mp3" id="ring"></audio>  <!-- Audio element to play the alarm sound -->
 
     <!-- Link to the JavaScript file -->
     <script src="date.js"></script>
