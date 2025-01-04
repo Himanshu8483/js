@@ -1,3 +1,4 @@
+// Array of Object:
 // We use this approach to dynamically add data to a webpage.
 // This is the list of students with their details
 let students = [
@@ -10,13 +11,13 @@ let students = [
 let output = document.querySelector("#tablebox");
 
 // This goes through each student in the list
-students.forEach((student) => {
+students.forEach((e) => {
     // For each student, it adds a new row in the table
     output.innerHTML += `
         <tr>
-            <td>${student.name}</td> <!-- This adds the student's name -->
-            <td>${student.age}</td>  <!-- This adds the student's age -->
-            <td>${student.city}</td> <!-- This adds the student's city -->
+            <td>${e.name}</td> <!-- This adds the student's name -->
+            <td>${e.age}</td>  <!-- This adds the student's age -->
+            <td>${e.city}</td> <!-- This adds the student's city -->
         </tr>
     `;
 });

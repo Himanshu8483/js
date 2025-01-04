@@ -1,5 +1,6 @@
+//  Making Dice 
 let roll=()=>{
-    let dice=(Math.floor(Math.random()*6)+1)
+    let dice=(Math.floor(Math.random()*6)+1)    // random number between 1 and 6
     console.log(dice);
 
     let box1=document.querySelector("#box1")
