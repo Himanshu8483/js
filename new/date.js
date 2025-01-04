@@ -37,14 +37,14 @@ setInterval(() => {
     show.innerHTML = currentTime; // Display the current time
 }, 1000); // Update the digital clock every second
 
-// Display the current time in a different format (e.g., Current Time: HH:MM:SS)
-let current = () => {
-    let show = document.querySelector("#time"); // Select the element to display the current time
-    let now = new Date(); // Get the current date and time
-    let time = now.toLocaleTimeString(); // Format time in a readable HH:MM:SS format
-    show.innerHTML = `Current Time: ${time}`; // Display the formatted current time
-};
-setInterval(current, 1000); // Update the displayed current time every second
+// // Display the current time in a different format (e.g., Current Time: HH:MM:SS)
+// let current = () => {
+//     let show = document.querySelector("#time"); // Select the element to display the current time
+//     let now = new Date(); // Get the current date and time
+//     let time = now.toLocaleTimeString(); // Format time in a readable HH:MM:SS format
+//     show.innerHTML = `Current Time: ${time}`; // Display the formatted current time
+// };
+// setInterval(current, 1000); // Update the displayed current time every second
 
 // Function to display the current time on the webpage
 let current = () => {  // Define a function to show the current time
@@ -73,8 +73,8 @@ let setAlarm = () => {  // Define a function to set an alarm
             setTimeout(() => {  // Stop the alarm after 6 seconds
                 document.querySelector("#ring").pause();  // Pause the alarm sound
                 clearInterval(int);  // Stop checking the time
-                show.innerHTML = "Stop Alarm";  // Update the message to indicate the alarm has stopped
-            }, 6000);  // Stop the alarm sound after 6 seconds
+                show.innerHTML = "Alarm Stopped";  // Update the message to indicate the alarm has stopped
+            }, 10000);  // Stop the alarm sound after 10 seconds
         }
     }, 1000);  // Check the time every second
 };
