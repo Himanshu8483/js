@@ -16,3 +16,10 @@ console.log(Math.floor(Math.random() * 10000));  // Generate a random integer be
 // Generate a 4-digit OTP
 let otp = Math.floor(Math.random() * 9000 + 1000);  // Generate a random number between 1000 and 9999
 console.log(otp);  // Print the 4-digit OTP
+
+
+function Person(name, age){
+    this.name=name;
+    this.age=age;
+}
+Person();
