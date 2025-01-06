@@ -15,9 +15,9 @@ let submitt = () => {
 
     // **1. Name validation**
     if (name === "") {
-        let inpname = document.querySelector("#inpname");
-        inpname.placeholder = "Not filled";  // Set placeholder to indicate missing input
-        inpname.style.border = "2px solid red";  // Highlight the input field
+        // let inpname = document.querySelector("#inpname");
+        // inpname.placeholder = "Not filled";  // Set placeholder to indicate missing input
+        // inpname.style.border = "2px solid red";  // Highlight the input field
         errname.innerHTML = "Please enter your name";  // Display error message
         errname.style.color = "red";
         errname.style.fontSize = "30px";

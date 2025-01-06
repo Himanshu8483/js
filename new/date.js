@@ -1,16 +1,16 @@
-// // Get the current date and time
-// let time = new Date();
-// console.log(time.toLocaleString()); // Logs the current date and time in a readable format
+// Get the current date and time
+let time = new Date();
+console.log(time.toLocaleString()); // Logs the current date and time in a readable format
 
-// // Extract specific parts of the date
-// let time1 = time.getFullYear();       // Gets the current year
-// let time2 = time.getMonth();          // Gets the current month (0-11)
-// let time3 = time.getDay();            // Gets the day of the week (0-6)
-// let time4 = time.getHours();          // Gets the current hour
-// let time5 = time.getMinutes();        // Gets the current minutes
-// let time6 = time.getSeconds();        // Gets the current seconds
-// let time7 = time.getMilliseconds();   // Gets the current milliseconds
-// console.log(time7); // Logs the milliseconds
+// Extract specific parts of the date
+let time1 = time.getFullYear();       // Gets the current year
+let time2 = time.getMonth();          // Gets the current month (0-11)
+let time3 = time.getDay();            // Gets the day of the week (0-6)
+let time4 = time.getHours();          // Gets the current hour
+let time5 = time.getMinutes();        // Gets the current minutes
+let time6 = time.getSeconds();        // Gets the current seconds
+let time7 = time.getMilliseconds();   // Gets the current milliseconds
+console.log(time7); // Logs the milliseconds
 
 // Function to display the current day name
 let timee = () => {
@@ -37,23 +37,23 @@ setInterval(() => {
     show.innerHTML = currentTime; // Display the current time
 }, 1000); // Update the digital clock every second
 
-// // Display the current time in a different format (e.g., Current Time: HH:MM:SS)
-// let current = () => {
-//     let show = document.querySelector("#time"); // Select the element to display the current time
-//     let now = new Date(); // Get the current date and time
-//     let time = now.toLocaleTimeString(); // Format time in a readable HH:MM:SS format
-//     show.innerHTML = `Current Time: ${time}`; // Display the formatted current time
-// };
-// setInterval(current, 1000); // Update the displayed current time every second
-
-// Function to display the current time on the webpage
-let current = () => {  // Define a function to show the current time
-    let show = document.querySelector("#time");  // Select the element with id "time" to display the time
-    let now = new Date();  // Create a new Date object to get the current time
-    let time = now.toLocaleTimeString();  // Convert the time to a readable format (like 12:05:30 PM)
-    show.innerHTML = `Current Time: ${time}`;  // Display the current time inside the HTML element
+// Display the current time in a different format (e.g., Current Time: HH:MM:SS)
+let current = () => {
+    let show = document.querySelector("#time"); // Select the element to display the current time
+    let now = new Date(); // Get the current date and time
+    let time = now.toLocaleTimeString(); // Format time in a readable HH:MM:SS format
+    show.innerHTML = `Current Time: ${time}`; // Display the formatted current time
 };
-setInterval(current, 1000);  // Run the 'current' function every second to update the time
+setInterval(current, 1000); // Update the displayed current time every second
+
+// // Function to display the current time on the webpage
+// let current = () => {  // Define a function to show the current time
+//     let show = document.querySelector("#time");  // Select the element with id "time" to display the time
+//     let now = new Date();  // Create a new Date object to get the current time
+//     let time = now.toLocaleTimeString();  // Convert the time to a readable format (like 12:05:30 PM)
+//     show.innerHTML = `Current Time: ${time}`;  // Display the current time inside the HTML element
+// };
+// setInterval(current, 1000);  // Run the 'current' function every second to update the time
 
 // Alarm Functionality 
 let setAlarm = () => {  // Define a function to set an alarm

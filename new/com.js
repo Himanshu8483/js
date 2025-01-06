@@ -31,7 +31,7 @@ var b="1"
 console.log(typeof(b))      // string
 var c=true;
 console.log(typeof(c))      // boolean
-var d;
+var d;              
 console.log(typeof(d))      // undefined
 var e=null;     
 console.log(typeof(e))      // object
@@ -350,7 +350,7 @@ show.innerHTML= "<p> Hello JavaSript! </p>";
 
 // Q4.
 // Create a simple counter on a webpage:
-// Display the number e in a <p> tag
+// Display the number in a <p> tag
 // Add two buttons: "Increase" and "Decrease".
 // Use onclick to increase or decrease the number by 1 when the buttons are clicked.
 let counter=0;
@@ -750,7 +750,8 @@ console.log(age);       // 22
 const student1 = {name:"Himanshu", age:25, Marks:80};
 const student2 = {city:"Rewa", grade:"A",Marks:90}
 const combinedStdent = {...student1, ...student2};
-console.log(combinedStdent);        // { name: 'Himanshu', age: 25, city: 'Rewa', grade: 'A' }
+console.log(combinedStdent);        //// { name: 'Himanshu', age: 25, Marks: 90, city: 'Rewa', grade: 'A' }
+
 
 const arr1 = ["Himanshu", 25]
 const arr2 = ["Rewa", "A"]
@@ -799,6 +800,7 @@ Questions Homework
     <!-- Button that shows/hides the box when clicked -->
     <button onclick="go()">Hello Everyone</button>
     <div id="box">hello</div>
+    
 
     <!-- Increase, Decrease, Reset font size with buttons -->
     <p id="num">Hello World!</p>
@@ -965,6 +967,7 @@ Pure Event
     <!-- Hide/show text on button click -->
     <button id="btn">Hide</button>
     <p id="par">Hello JavaScript!</p>
+
 
     <script src="pureEvent.js"></script>
 </body>
@@ -1264,7 +1267,7 @@ Array of Object, Form Dynamically,
 let students = [
     { name: "Himanshu", age: 22, city: "Rewa" }, // First student's details
     { name: "Jatin", age: 23, city: "Sehore" },  // Second student's details
-    { name: "Vijay", age: 24, city: "Dewas" },  // Third student's details
+    { name: "Vijay", age: 24, city: "Dewas" }  // Third student's details
 ];
 
 // This gets the empty part of the table (where rows will go)
