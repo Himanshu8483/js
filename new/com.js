@@ -1624,6 +1624,7 @@ Date & Time, Alarm
     <button onclick="age()">Age</button>
     <!-- This paragraph will display the calculated age -->
     <p id="totalAge"></p>
+    
     <!-- Digital Clock -->
     <h1 id="display"></h1> <!-- Displays the digital clock -->
     <h1 id="time"></h1> <!-- Displays the current time -->
