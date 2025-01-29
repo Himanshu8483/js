@@ -1624,7 +1624,6 @@ Date & Time, Alarm
     <button onclick="age()">Age</button>
     <!-- This paragraph will display the calculated age -->
     <p id="totalAge"></p>
-    
     <!-- Digital Clock -->
     <h1 id="display"></h1> <!-- Displays the digital clock -->
     <h1 id="time"></h1> <!-- Displays the current time -->
@@ -2007,3 +2006,189 @@ let roll=()=>{
         box6.style.opacity=1;
     }
 }
+
+
+JAVA SCRIPT TEST 2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Exam</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <!-- answer 3 -->
+    <form>
+    Enter Name: <input type="text" id="inpname">
+    <p id="inpnam"></p>
+    Enter Email: <input type="text" name="" id="inpemail">
+    <p id="inpemai"></p>
+    <input type="submit" onclick="return submitt()" >
+</form>
+<br><br><br>
+<!-- answer 4 -->
+    <div id="txt">Cybrom</div>
+    <button onclick="show()" id="btn2">Hide</button>
+
+<br><br><br>
+<!-- answer 5 -->
+    <div id="text">Hello</div>
+    <button onclick="btn()">Button</button>
+    <script src="test.js"></script>
+</body>
+</html>
+
+// Q.1
+// "Write a JavaScript program that prompts the user to enter a number and displays whether the number is positive, negative, zero, or if the input is invalid."
+let show = prompt("Enter Number");
+if(show>0){
+    alert("Positive")
+}
+else if(show<0){
+    alert("Negitive")
+}
+else if(show==0){
+    alert("Zero")
+}
+else {
+    alert("Wrong Input")
+};
+
+// Q.2
+// Create an object user with properties name, age, and a method greet that displays: "Hello, my name is [name] and I am [age] years old." and show the output in console.
+let obj={
+    name: "Himanshu",
+    age:22,
+    greet: function(){
+        console.log(`Hello, my name is ${this.name} and I am ${this.age} years old`)
+    }
+
+}
+obj.greet();
+
+// Q.3
+// Create a simple HTML form with two input fields for name and email and a submit button.
+// Write JavaScript to validate the form:
+// Ensure the name field is not empty.
+// Ensure the email field contains the @ symbol.
+// Display appropriate error messages if validation fails.
+let submitt=()=>{
+let name= document.querySelector("#inpname").value;
+let email= document.querySelector("#inpemail").value;
+
+let namee= document.querySelector("#inpnam");
+let emai= document.querySelector("#inpemai");
+    if(name==""){
+    namee.innerHTML="Wrong Input";
+    return false;
+    }
+
+    else if(email==""){
+    emai.innerHTML="Wrong Email"
+        return false;
+    }
+    else if (!(email.includes("@"))){
+        emai.innerHTML="Wrong"
+        return false;
+    }
+}
+
+// Q.4
+// Create a div with the text "Name: Cybrom" and a button with the label "Hide".
+// When the button is clicked:
+// If the text is visible, it should vanish, and the button label should change to "Show".
+// If the text is hidden, it should reappear, and the button label should change back to "Hide"."
+let show=()=>{
+    let txt= document.querySelector("#txt")
+    let btn2= document.querySelector("#btn2")
+
+    if(txt.style.display=="none"){
+        txt.style.display="block";
+        btn2.innerHTML="Hide";
+    }
+    else {
+        txt.style.display="none";
+        btn2.innerHTML="Show";
+    }
+}
+
+// Q.5
+// . Create a div that displays the text "Hello".
+// Use setTimeout to: Change the text to "Welcome" after 2 seconds.
+// Change it again to "Goodbye" after another 2 seconds.
+// Finally, after 2 more seconds, remove the text completely.
+let btn=()=>{
+ let show = document.querySelector("#text")
+    setTimeout(()=>{
+    show.innerHTML="Welcome";
+    }, 2000)
+    setTimeout(()=>{
+    show.innerHTML="GoodBye";
+    }, 4000)
+    setTimeout(()=>{
+        show.innerHTML="";
+    }, 6000)
+}
+
+
+
+
+Local Storage
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    <button onclick="set()">set</button>
+    <h1 id="data"></h1>
+    <button onclick="remove()">remove</button>
+
+    <br><br>
+    Enter Name <input type="text" id="name"><br>
+    Enter Age <input type="text" id="age"> 
+
+    <button onclick="sett()">Set</button>
+    <p id="show"></p>
+
+    <script src="localStorage.js"></script>
+</body>
+</html>
+// Function to set default values in localStorage
+let set = () => {
+    localStorage.setItem("Name", "Himanshu"); // Setting default name
+    localStorage.setItem("Age", 22); // Setting default age
+};
+
+let show = document.querySelector("#data"); // // Select the HTML element to display stored information
+
+let ans = localStorage.getItem("Name");     // Retrieve the stored name from localStorage
+show.innerHTML = ans; // Show the name in the HTML
+
+// Function to clear all data from localStorage
+let remove = () => {
+    localStorage.clear(); // Clear all stored data
+};
+
+// Function to set new values from user input
+let sett = () => {
+    let inpname = document.querySelector("#name").value; // Get the value from input 
+    let inpage = document.querySelector("#age").value; // Get the value from input
+
+    localStorage.setItem("Name", inpname); // Store the new name
+    localStorage.setItem("Age", inpage); // Store the new age
+
+    location.reload(); // Reload the page to update displayed values
+    // location.href = "index.html"; // redirect to another page
+};
+
+let show = document.querySelector("#show");     // Select the HTML to display the message    
+
+// Retrieve stored name and age from localStorage
+let name = localStorage.getItem("Name");
+let age = localStorage.getItem("Age");
+show.innerHTML = `Hello ${name} and your age is ${age} Years`;     // Display message in the 'show' element.
+
