@@ -7,47 +7,54 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body onload="fetchData()">
+<!-- <body> -->
   <h1>School Fees Management System</h1>
   <div class="container">
-  <div class="group">
-    <label for="class">Class:</label>
-    <select id="class" oninput="return searchh()">
-      <option value="">Class</option>
-      <option value="">Class 9th</option>
-      <option value="">Class 10th</option>
-      <option value="">Class 11th</option>
-      <option value="">Class 12th</option>
-    </select>
-  </div>
-  <div class="group">
-    <label for="section">Section:</label>
-    <select id="section">
-      <option value="">Section</option>
-      <option value="">Section A</option>
-      <option value="">Section B</option>
-    </select>
-  </div>
-  <div class="group">
-    <label for="searchInp">Search by Name/Roll No:</label>
-    <input type="text" placeholder="Search Here" id="searchInp" oninput="return searchh()">
-  </div>
-    <button onclick="searchStudent()">Search</button>
-    <br><br>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Mobile No</th>
-          <th>Class</th>
-          <th>Section</th>
-          <th>Roll No</th>
-          <th>Fees Status</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody id="studentTable">
-      </tbody>
-    </table>
+    <div class="group">
+      <label for="class">Select Class:</label>
+      <select id="class">
+        <option value="">Select Class</option>
+        <option value="9">Class 9th</option>
+        <option value="10">Class 10th</option>
+        <option value="11">Class 11th</option>
+        <option value="12">Class 12th</option>
+        
+      </select>
+    </div>
+    <div class="group">
+      <label for="section">Select Section:</label>
+      <select id="section">
+        <option value="">Section</option>
+        <option value="A">Section A</option>
+        <option value="B">Section B</option>
+      </select>
+    </div>
+    <div class="group">
+      <label for="name">Student's Name:</label>
+      <input type="text" placeholder="Name" id="name">
+    </div>
+    <div class="group">
+      <label for="rollNo">Enter Roll No:</label>
+      <input type="text" placeholder="Enroll No" id="rollNo">
+      <!-- <input type="text" placeholder="Enroll No" id="rollNo" oninput="return searchh()"> -->
+    </div>
+      <button onclick="searchStudent()">Search</button>
+      <br><br><br>
+      <table id="studentTab" style="display: none;">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Mobile No</th>
+            <th>Class</th>
+            <th>Section</th>
+            <th>Roll No</th>
+            <th>Fees Status</th>
+            <th id="action" style="display: none;">Action</th> <!-- Initially Hidden -->
+          </tr>
+        </thead>
+        <tbody id="studentTable">
+        </tbody>
+      </table>
   </div>
 
 

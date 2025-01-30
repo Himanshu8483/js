@@ -83,7 +83,7 @@
       "class": "11",
       "section": "A",
       "rollNo": 1101,
-      "feesPaid": true,
+      "feesPaid": false,
       "id": "157f"
     },
     {
@@ -101,7 +101,7 @@
       "class": "11",
       "section": "A",
       "rollNo": 1103,
-      "feesPaid": true,
+      "feesPaid": false,
       "id": "e133"
     },
     {
@@ -110,7 +110,7 @@
       "class": "12",
       "section": "B",
       "rollNo": 1201,
-      "feesPaid": true,
+      "feesPaid": false,
       "id": "5f34"
     },
     {
@@ -119,7 +119,7 @@
       "class": "12",
       "section": "A",
       "rollNo": 1202,
-      "feesPaid": true,
+      "feesPaid": false,
       "id": "9436"
     },
     {
@@ -128,7 +128,7 @@
       "class": "12",
       "section": "B",
       "rollNo": 1203,
-      "feesPaid": true,
+      "feesPaid": false,
       "id": "a303"
     }
   ]
