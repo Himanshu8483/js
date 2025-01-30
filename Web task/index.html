@@ -9,29 +9,35 @@
 <body onload="fetchData()">
   <h1>School Fees Management System</h1>
   <div class="container">
+  <div class="group">
     <label for="class">Class:</label>
-    <select id="class">
+    <select id="class" oninput="return searchh()">
       <option value="">Class</option>
       <option value="">Class 9th</option>
       <option value="">Class 10th</option>
       <option value="">Class 11th</option>
       <option value="">Class 12th</option>
     </select>
+  </div>
+  <div class="group">
     <label for="section">Section:</label>
     <select id="section">
       <option value="">Section</option>
       <option value="">Section A</option>
       <option value="">Section B</option>
     </select>
-    <label for="rollNo">Roll No:</label>
-    <input type="number" id="rollNo">    
-    <input type="number" placeholder="Search Here" id="rollNo" oninput="searchh()">
+  </div>
+  <div class="group">
+    <label for="searchInp">Search by Name/Roll No:</label>
+    <input type="text" placeholder="Search Here" id="searchInp" oninput="return searchh()">
+  </div>
     <button onclick="searchStudent()">Search</button>
     <br><br>
     <table>
       <thead>
         <tr>
           <th>Name</th>
+          <th>Mobile No</th>
           <th>Class</th>
           <th>Section</th>
           <th>Roll No</th>
@@ -42,16 +48,9 @@
       <tbody id="studentTable">
       </tbody>
     </table>
-
-    <div id="pagin"></div>
-
   </div>
 
 
-  <!-- jquery for pagination  -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
- <!-- Pagination script  -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.6.0/pagination.min.js" integrity="sha512-GzbaI5EsNzdEUq6/2XLYpr1y9CUZRIVsUeWTAFgULtQa5jZ3Nug8i0nZKM6jp9NffBCZhymPPQFcF0DK+JkRpw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- alert library script  -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="script.js"></script>

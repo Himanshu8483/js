@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  h1 {
+    background-color: #0c5d69;
+    color: white;
+    padding: 15px;
+    margin: 0;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgb(0, 0, 0);
+  }
+  
+  .group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input, select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    
+  }
+  thead {
+    background-color: #0c5d69;
+    color: white;
+    
+  }
+  /* tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  } */
+  
+  tbody tr:hover {
+    background-color: #9ababe;
+  }
+  
+  td, th {
+    padding: 10px;
+    border: 1px solid gray;
+  }
+  
+  button {
+    background-color: #0c5d69;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  button:hover {
+    background-color: #053036;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    h1{
+        width: 100%;
+    }
+    .container {
+      width: 95%;
+    }
+    
+    tr {
+        display: flex;
+      flex-direction: column;
+    }
+  }
+  

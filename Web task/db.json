@@ -1,22 +1,135 @@
 {
   "Fees": {
-    "9th": { "Tuition": 5000, "Library": 1500, "Exam": 800 },
-    "10th": { "Tuition": 6000, "Library": 2000, "Exam": 1000 },
-    "11th": { "Tuition": 7000, "Library": 2500, "Exam": 1200 },
-    "12th": { "Tuition": 8000, "Library": 3000, "Exam": 1500 }
+    "9th": {
+      "tution": 5000,
+      "library": 1500,
+      "exam": 800
+    },
+    "10th": {
+      "tution": 6000,
+      "library": 2000,
+      "exam": 1000
+    },
+    "11th": {
+      "tution": 7000,
+      "library": 2500,
+      "exam": 1200
+    },
+    "12th": {
+      "tution": 8000,
+      "library": 3000,
+      "exam": 1500
+    }
   },
   "Students": [
-    { "name": "Himanshu", "class": "9", "section": "A", "rollNo": 901, "feesPaid": false },
-    { "name": "Jatin", "class": "9", "section": "B", "rollNo": 902, "feesPaid": false },
-    { "name": "Vijay", "class": "9", "section": "A", "rollNo": 903, "feesPaid": false },
-    { "name": "Yash", "class": "10", "section": "B", "rollNo": 1001, "feesPaid": true },
-    { "name": "Shradha", "class": "10", "section": "A", "rollNo": 1002, "feesPaid": true },
-    { "name": "Dhruv", "class": "10", "section": "B", "rollNo": 1003, "feesPaid": true },
-    { "name": "Sushant", "class": "11", "section": "A", "rollNo": 1101, "feesPaid": false },
-    { "name": "Supriti", "class": "11", "section": "B", "rollNo": 1102, "feesPaid": false },
-    { "name": "Rohit", "class": "11", "section": "A", "rollNo": 1103, "feesPaid": false },
-    { "name": "Vikas", "class": "12", "section": "B", "rollNo": 1201, "feesPaid": true },
-    { "name": "Neetu", "class": "12", "section": "A", "rollNo": 1202, "feesPaid": true },
-    { "name": "Indrajeet", "class": "12", "section": "B", "rollNo": 1203, "feesPaid": true }
-]
+    {
+      "name": "Himanshu",
+      "number": "7909348483",
+      "class": "9",
+      "section": "A",
+      "rollNo": 901,
+      "feesPaid": true,
+      "action": "Pay Now",
+      "id": "c3b4"
+    },
+    {
+      "name": "Jatin",
+      "number": "7909348483",
+      "class": "9",
+      "section": "B",
+      "rollNo": 902,
+      "feesPaid": true,
+      "id": "efe2"
+    },
+    {
+      "name": "Vijay",
+      "number": "7909348483",
+      "class": "9",
+      "section": "A",
+      "rollNo": 903,
+      "feesPaid": true,
+      "id": "85e0"
+    },
+    {
+      "name": "Yash",
+      "number": "7909348483",
+      "class": "10",
+      "section": "B",
+      "rollNo": 1001,
+      "feesPaid": true,
+      "id": "8f8d"
+    },
+    {
+      "name": "Shradha",
+      "number": "7909348483",
+      "class": "10",
+      "section": "A",
+      "rollNo": 1002,
+      "feesPaid": true,
+      "id": "828a"
+    },
+    {
+      "name": "Dhruv",
+      "number": "7909348483",
+      "class": "10",
+      "section": "B",
+      "rollNo": 1003,
+      "feesPaid": true,
+      "id": "d311"
+    },
+    {
+      "name": "Sushant",
+      "number": "7909348483",
+      "class": "11",
+      "section": "A",
+      "rollNo": 1101,
+      "feesPaid": true,
+      "id": "157f"
+    },
+    {
+      "name": "Supriti",
+      "number": "7909348483",
+      "class": "11",
+      "section": "B",
+      "rollNo": 1102,
+      "feesPaid": false,
+      "id": "1485"
+    },
+    {
+      "name": "Rohit",
+      "number": "7909348483",
+      "class": "11",
+      "section": "A",
+      "rollNo": 1103,
+      "feesPaid": true,
+      "id": "e133"
+    },
+    {
+      "name": "Vikas",
+      "number": "7909348483",
+      "class": "12",
+      "section": "B",
+      "rollNo": 1201,
+      "feesPaid": true,
+      "id": "5f34"
+    },
+    {
+      "name": "Neetu",
+      "number": "7909348483",
+      "class": "12",
+      "section": "A",
+      "rollNo": 1202,
+      "feesPaid": true,
+      "id": "9436"
+    },
+    {
+      "name": "Indrajeet",
+      "number": "7909348483",
+      "class": "12",
+      "section": "B",
+      "rollNo": 1203,
+      "feesPaid": true,
+      "id": "a303"
+    }
+  ]
 }
