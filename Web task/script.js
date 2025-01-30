@@ -1,115 +1,80 @@
+let searchStudent = () =>{
+  let selectedClass = document.querySelector("#class").value;
+  let selectedSection = document.querySelector("#section").value;
+  let rollNo = document.querySelector("#section").value;
+  let studentTable = document.querySelector("#section");
 
-// async function Fees() {
-//   let rollNo = document.getElementById("rollNo").value;
-//   studentClass = document.getElementById("class").value;
-//   let section = document.getElementById("section").value;
+}
 
-//   if (!rollNo || !studentClass || !section) {
-//     alert("Please fill all fields!");
-//     return false;
-//   }
-
-//   try {
-//     // Fetch JSON data
-//     const response = await fetch("fees.json");
-//     const data = await response.json();
-//     fees = data[studentClass];
-
-//     // Check if fees exist for the selected class
-//     if (fees) {
-//       const resultDiv = document.getElementById("result");
-//       resultDiv.innerHTML = `
-//         <h3>Fee Details for Roll No: ${rollNo}</h3>
-//         <p>Tuition Fee: ₹${fees["Tuition Fee"]}</p>
-//         <p>Miscellaneous Fee: ₹${fees["Miscellaneous Fee"]}</p>
-//         <p>Exam Fee: ₹${fees["Exam Fee"]}</p>
-//         <h4>Total Fee: ₹${fees["Tuition Fee"] + fees["Miscellaneous Fee"] + fees["Exam Fee"]}</h4>
-//       `;
-
-//       // Show the "Pay Now" button
-//       document.getElementById("payButton").style.display = "block";
-//     } else {
-//       alert("Fees not found for the selected class.");
-//     }
-//   } catch (error) {
-//     console.error("Error fetching fees:", error);
-//     alert("Unable to fetch fees. Please try again later.");
-//   }
-// }
-
-// function payFees() {
-//   // Prevent duplicate payments
-//   if (!fees || isPaid) {
-//     alert("Fees already paid or no fees to pay.");
-//     return;
-//   }
-
-//   // Simulate payment success
-//   isPaid = true;
-
-// //   // Display payment confirmation
-// //   const paymentStatus = document.getElementById("paymentStatus");
-// //   paymentStatus.innerHTML = `
-// //     <h3>Payment Successful!</h3>
-// //     <p>Total Fee Paid: ₹${fees["Tuition Fee"] + fees["Miscellaneous Fee"] + fees["Exam Fee"]}</p>
-// //     <p>Status: Paid</p>
-// //   `;
-
-// //   // Hide "Pay Now" button after payment
-// //   document.getElementById("payButton").style.display = "none";
-// // }
-        
-// const data = {
-//   Fees: {
-//     "9th": { Tuition: 5000, Library: 1500, Exam: 800 },
-//     "10th": { Tuition: 6000, Library: 2000, Exam: 1000 },
-//     "11th": { Tuition: 7000, Library: 2500, Exam: 1200 },
-//     "12th": { Tuition: 8000, Library: 3000, Exam: 1500 }
-//   },
-//   Students: [
-//     { Name: "Himanshu", Roll: "1234", Class: "12th" },
-//     { Name: "Jatin", Roll: "4321", Class: "10th" },
-//     { Name: "Yash", Roll: "1243", Class: "9th" },
-//     { Name: "Vijay", Roll: "3412", Class: "11th" }
-//   ]
-// };
-// // Get fee details of a class
-// function getFee(className) {
-//   return data.Fees[className] || "Class not found";
-// }
-
-// // Get student details by name
-// function getStudent(name) {
-//   return data.Students.find(s => s.Name === name) || "Student not found";
-// }
-
-// // Example Usage
-// console.log(getFee("12th"));      // Fees for class 12th
-// console.log(getStudent("Himanshu")); // Details of Himanshu
-
-
-fetch("db.json")
-  .then(response => response.json())  // Convert to JavaScript object
-  .then(db => {
-    console.log(db);  // Print full JSON data
-    console.log(db.Fees["12th"]);  // Print fee details of class 12th
-    console.log(db.Fees["11th"]);  // Print fee details of class 12th
-    console.log(db.Students["Name"]);  // Print fee details of class 12th
-    console.log(db.Students["Name"]);  // Print fee details of class 12th
+let fetchData= async()=>{
+  let url= 'http://localhost:3000/Students';
+  let res= await fetch(url, {method:"GET"})
+  let data= await res.json()
+  console.log(data);
+  paginationn(data);
+}
+let searchh=async()=>{
+let rollNo = document.querySelector('#rollNo').value.toLowerCase();
+let url= 'http://localhost:3000/Students';
+let res= await fetch(url,{ method:"GET"})
+  let data = await res.json()
+  let filterData=data.filter((e)=>{
+    return e.Name.toLowerCase().includes(rollNo) || e.Treatment.toLowerCase().includes(rollNo)|| e.Age.toString().includes(rollNo)
   })
-  .catch(error => console.error("Error loading JSON:", error));
-  // const jsonData = `{
-  //   "Fees": {
-  //     "9th": { "Tuition": 5000, "Library": 1500, "Exam": 800 },
-  //     "10th": { "Tuition": 6000, "Library": 2000, "Exam": 1000 },
-  //     "11th": { "Tuition": 7000, "Library": 2500, "Exam": 1200 },
-  //     "12th": { "Tuition": 8000, "Library": 3000, "Exam": 1500 }
-  //   },
-  //   "Students": [
-  //     { "Name": "Himanshu", "Roll": "1234", "Class": "12th" }
-  //   ]
-  // }`;
+  paginationn(filterData)
+}
+let paginationn=(data)=>{
+$('#pagin').pagination({
+  dataSource: data,
+  pageSize: 5,
+  showSizeChanger: true,
+  callback: function(data, pagination) {
+    dataShow(data)
+  }
+})
+}
+let dataShow=(data)=>{
+  let show=document.querySelector("#studentTable")
+  show.innerHTML=""
+  data.map((e)=>{
+      show.innerHTML+= `
+      <div class="row">
+          <div>${e.name}</div>
+          <div>${e.class}</div>
+          <div>${e.section}</div>
+          <div>${e.rollNo}</div>
+          <div>${e.feesStatus}</div>
+          <div>${e.Action}</div>
+          <div onclick="condel('${e.id}')" class="cancel-button">Cancel</div>
+          <div onclick="formFill('${e.id}')" class="cancel-button" id="edit">Edit</div>
+      </div> `
+  })
+}
+    
+let del =(id)=>{
+  let url = `http://localhost:3000/appointment/${id}`
+  fetch(url, {method: "DELETE"})
+}
+
+// alert script library 
+let condel=(id)=>{
+Swal.fire({
+  title: "Are you sure?",
+  text: "This cannot be undone, proceed carefully!",
+  icon: "warning",
+  showCancelButton: true,
+  confirmButtonColor: "#3085d6",
+  cancelButtonColor: "#d33",
+  confirmButtonText: "Yes, delete it!",
   
-  // const data = JSON.parse(jsonData);  // Convert to JavaScript object
-  // console.log(data.Fees["12th"]); // ✅ Working!
-  
+}).then((result) => {
+  if (result.isConfirmed) {
+    del(id)
+    Swal.fire({
+      title: "Deleted!",
+      text: "Your file has been deleted.",
+      icon: "success"
+    });
+  }
+});
+}

@@ -6,9 +6,17 @@
     "12th": { "Tuition": 8000, "Library": 3000, "Exam": 1500 }
   },
   "Students": [
-    { "Name": "Himanshu", "Roll": "1234", "Class": "12th" },
-    { "Name": "Jatin", "Roll": "4321", "Class": "10th" },
-    { "Name": "Yash", "Roll": "1243", "Class": "9th" },
-    { "Name": "Vijay", "Roll": "3412", "Class": "11th" }
-  ]
+    { "name": "Himanshu", "class": "9", "section": "A", "rollNo": 901, "feesPaid": false },
+    { "name": "Jatin", "class": "9", "section": "B", "rollNo": 902, "feesPaid": false },
+    { "name": "Vijay", "class": "9", "section": "A", "rollNo": 903, "feesPaid": false },
+    { "name": "Yash", "class": "10", "section": "B", "rollNo": 1001, "feesPaid": true },
+    { "name": "Shradha", "class": "10", "section": "A", "rollNo": 1002, "feesPaid": true },
+    { "name": "Dhruv", "class": "10", "section": "B", "rollNo": 1003, "feesPaid": true },
+    { "name": "Sushant", "class": "11", "section": "A", "rollNo": 1101, "feesPaid": false },
+    { "name": "Supriti", "class": "11", "section": "B", "rollNo": 1102, "feesPaid": false },
+    { "name": "Rohit", "class": "11", "section": "A", "rollNo": 1103, "feesPaid": false },
+    { "name": "Vikas", "class": "12", "section": "B", "rollNo": 1201, "feesPaid": true },
+    { "name": "Neetu", "class": "12", "section": "A", "rollNo": 1202, "feesPaid": true },
+    { "name": "Indrajeet", "class": "12", "section": "B", "rollNo": 1203, "feesPaid": true }
+]
 }
