@@ -10,6 +10,7 @@
 <!-- <body> -->
   <h1>School Fees Management System</h1>
   <div class="container">
+  <h2>Enter Details To Pay Fees</h2>
     <div class="group">
       <label for="class">Select Class:</label>
       <select id="class">
@@ -18,7 +19,6 @@
         <option value="10">Class 10th</option>
         <option value="11">Class 11th</option>
         <option value="12">Class 12th</option>
-        
       </select>
     </div>
     <div class="group">
@@ -34,27 +34,39 @@
       <input type="text" placeholder="Name" id="name">
     </div>
     <div class="group">
-      <label for="rollNo">Enter Roll No:</label>
-      <input type="text" placeholder="Enroll No" id="rollNo">
+      <label for="number">Mobile Number:</label>
+      <input type="number" placeholder="Mobile" id="number">
+    </div>
+    <div class="group">
+      <label for="rollNo">Roll Number:</label>
+      <input type="text" placeholder="Enroll Number" id="rollNo">
+    </div>
+    <div class="group">
+      <label for="inpId">Enter User Id:</label>
+      <input type="text" placeholder="User Id" id="inpId">
       <!-- <input type="text" placeholder="Enroll No" id="rollNo" oninput="return searchh()"> -->
     </div>
-      <button onclick="searchStudent()">Search</button>
+      <button onclick="searchStudent()">Submit</button>
       <br><br><br>
-      <table id="studentTab" style="display: none;">
+      <table style="display: none;" id="studentTab">
+        <h2>Manage Student Information</h2>
         <thead>
           <tr>
             <th>Name</th>
-            <th>Mobile No</th>
             <th>Class</th>
             <th>Section</th>
-            <th>Roll No</th>
+            <th>User Id</th>
+            <th>Tution Fees</th>
+            <th>Other Fees</th>
+            <th>Total Fees</th>
             <th>Fees Status</th>
-            <th id="action" style="display: none;">Action</th> <!-- Initially Hidden -->
+            <th>Action</th>
           </tr>
         </thead>
         <tbody id="studentTable">
         </tbody>
       </table>
+
   </div>
 
 

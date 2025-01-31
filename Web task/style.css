@@ -13,8 +13,8 @@ body {
     margin: 0;
   }
   
-  .container {
-    width: 80%;
+  .container, .content {
+      width: 80%;
     margin: 20px auto;
     background: white;
     padding: 20px;
@@ -44,7 +44,7 @@ body {
 
   table {
     width: 100%;
-    /* border-collapse: collapse; */
+    border-collapse: collapse;
     
   }
   thead {
@@ -52,15 +52,16 @@ body {
     color: white;
     
   }
-  /* tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
-  } */
+  tbody tr:nth-child(even) {
+    background-color: #cfeef5;
+  }
   
   tbody tr:hover {
     background-color: #9ababe;
   }
   
   td, th {
+    width: 10%;
     padding: 10px;
     border: 1px solid gray;
   }
@@ -73,12 +74,17 @@ body {
     cursor: pointer;
     border-radius: 5px;
     font-size: 14px;
+    transition: 2s all ease;
+    letter-spacing: 1px;
   }
   
   button:hover {
     background-color: #053036;
+    transform: scale(1.1);
   }
-  
+  .payColumn{
+    width: 100px;
+  }
   /* Responsive Design */
   @media (max-width: 768px) {
     h1{
@@ -87,7 +93,9 @@ body {
     .container {
       width: 95%;
     }
-    
+    td, th {
+      width: 100%;
+    }
     tr {
         display: flex;
       flex-direction: column;
