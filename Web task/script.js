@@ -1,4 +1,4 @@
-
+// for students 
 let fetchData = async()=>{
     let url='http://localhost:3000/Students'
     let res=await fetch(url, {method:"GET"})
@@ -6,6 +6,7 @@ let fetchData = async()=>{
     dataShow(data);
     console.log(data);
 }
+// for search by details 
 let searchStudent = async()=>{
   let searchName=document.querySelector("#name").value.toLowerCase().trim();
   let searchRoll=document.querySelector("#rollNo").value.toString().trim();
@@ -40,7 +41,6 @@ let searchStudent = async()=>{
       confirmButtonText: "Understood",
     })
   }
-  
 };
 
 let dataShow=(data)=>{
@@ -56,17 +56,23 @@ let dataShow=(data)=>{
           <td>${e.tution}</td>
           <td>${e.library+e.exam}</td>
           <td>${e.tution+e.library+e.exam}</td>
-          <td>${e.feesPaid ? "Paid" : "Not Paid"}</td>
+          <td>${e.feesPaid ? "✅ Paid" : "❌ Not Paid"}</td>
           <td>
-            <button class="payColumn" ${e.feesPaid ? 'disabled' : ''} onclick="return payFees('${e.id}')">
-              ${e.feesPaid ? 'Done' : 'Pay'}
-            </button>
+            <button class="payColumn" ${e.feesPaid ? 'disabled' : ''} onclick="payFees('${e.id}')">
+              ${e.feesPaid ? 'Done' : 'Pay'}</button>
           </td>
       </tr> `
       // <td class="payColumn" onclick="return payFees('${e.id}')">Pay</td>
   })
 };
 let payFees = async (id) => {
+  Swal.fire({
+    title: "Invalid Data!",
+    text: "This cannot be wrong/empty, Enter Correct Details.",
+    icon: "warning",
+    confirmButtonColor: "#0c5d69",
+    confirmButtonText: "Understood",
+  })
   let url = `http://localhost:3000/Students/${id}`;
   let res = await fetch(url);
   let data = await res.json();
@@ -78,5 +84,4 @@ let payFees = async (id) => {
     body: JSON.stringify(data) 
   });
   location.href="index.html";
-  return false;  
 };
