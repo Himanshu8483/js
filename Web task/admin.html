@@ -6,70 +6,41 @@
   <title>School Fees Management System</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body onload="fetchData()">
-<!-- <body> -->
+<body onload="fetchAdmin()">
   <h1>School Fees Management System</h1>
   <div class="container">
-  <h2>Enter Details To Pay Fees</h2>
-    <div class="group">
-      <label for="class">Select Class:</label>
-      <select id="class">
-        <option value="">Select Class</option>
-        <option value="9">Class 9th</option>
-        <option value="10">Class 10th</option>
-        <option value="11">Class 11th</option>
-        <option value="12">Class 12th</option>
-      </select>
-    </div>
-    <div class="group">
-      <label for="section">Select Section:</label>
-      <select id="section">
-        <option value="">Section</option>
-        <option value="A">Section A</option>
-        <option value="B">Section B</option>
-      </select>
-    </div>
-    <div class="group">
-      <label for="name">Student's Name:</label>
-      <input type="text" placeholder="Name" id="name">
-    </div>
-    <div class="group">
-      <label for="number">Mobile Number:</label>
-      <input type="number" placeholder="Mobile" id="number">
-    </div>
-    <div class="group">
-      <label for="rollNo">Roll Number:</label>
-      <input type="text" placeholder="Enroll Number" id="rollNo">
-    </div>
-    <div class="group">
-      <label for="inpId">Enter User Id:</label>
-      <input type="text" placeholder="User Id" id="inpId">
-      <!-- <input type="text" placeholder="Enroll No" id="rollNo" oninput="return searchh()"> -->
-    </div>
-      <button onclick="searchStudent()">Submit</button>
+  <h2>Enter Name/Mobile No./Class to Search</h2>
+  
+    <input type="text"  placeholder="Search Here" id="searchInp" oninput="searchh()">
+
       <br><br><br>
-      <table id="studentTab">
+      <table>
         <h2>Manage Student Information</h2>
         <thead>
           <tr>
             <th>Name</th>
             <th>Class</th>
-            <th>Section</th>
+            <th>Section</th>  
+            <th>Mobile No</th>
+            <th>Roll No</th>
             <th>User Id</th>
-            <th>Tution Fees</th>
-            <th>Other Fees</th>
             <th>Total Fees</th>
             <th>Fees Status</th>
-            <th>Action</th>
+            <th>Delete</th>
           </tr>
         </thead>
-        <tbody id="studentTable">
+        <tbody id="studentData">
         </tbody>
       </table>
 
   </div>
+  <div id="pagin"></div>
 
-
+ <!-- jquery for pagination  -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Pagination script  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.6.0/pagination.min.js" integrity="sha512-GzbaI5EsNzdEUq6/2XLYpr1y9CUZRIVsUeWTAFgULtQa5jZ3Nug8i0nZKM6jp9NffBCZhymPPQFcF0DK+JkRpw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
     <!-- alert library script  -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="script.js"></script>

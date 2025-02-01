@@ -1,15 +1,8 @@
-// for students 
-let fetchData = async()=>{
-    let url='http://localhost:3000/Students'
-    let res=await fetch(url, {method:"GET"})
-    let data = await res.json()
-    dataShow(data);
-    console.log(data);
-}
 // for search by details 
 let searchStudent = async()=>{
   let searchName=document.querySelector("#name").value.toLowerCase().trim();
   let searchRoll=document.querySelector("#rollNo").value.toString().trim();
+  let searchNumber=document.querySelector("#number").value.toString().trim();
   let searchId=document.querySelector("#inpId").value.toLowerCase().toString().trim()
   let searchClass = document.querySelector("#class").value;
   let searchSection = document.querySelector("#section").value;
@@ -23,6 +16,7 @@ let searchStudent = async()=>{
       (e.name.toLowerCase().includes(searchName)) &&
       (e.id.toString().toLowerCase().trim() === searchId) &&
       (e.rollNo.toString().trim() == searchRoll) &&
+      (e.number.toString().trim() == searchNumber) &&
       (e.class === searchClass) &&
       ( e.section === searchSection)
       // (searchSection === "Section" || e.section === searchSection)
@@ -53,9 +47,9 @@ let dataShow=(data)=>{
           <td>${e.class}</td>
           <td>${e.section}</td>
           <td>${e.id}</td>
-          <td>${e.tution}</td>
-          <td>${e.library+e.exam}</td>
-          <td>${e.tution+e.library+e.exam}</td>
+          <td>${e.fees.tution}</td>
+          <td>${e.fees.library+e.fees.exam}</td>
+          <td>${e.totalFees}</td>
           <td>${e.feesPaid ? "✅ Paid" : "❌ Not Paid"}</td>
           <td>
             <button class="payColumn" ${e.feesPaid ? 'disabled' : ''} onclick="payFees('${e.id}')">
@@ -67,9 +61,9 @@ let dataShow=(data)=>{
 };
 let payFees = async (id) => {
   Swal.fire({
-    title: "Invalid Data!",
-    text: "This cannot be wrong/empty, Enter Correct Details.",
-    icon: "warning",
+    title: "Payment Done!",
+    text: "Payment will be Completed it's can't be Refunded",
+    icon: "success",
     confirmButtonColor: "#0c5d69",
     confirmButtonText: "Understood",
   })
@@ -83,5 +77,162 @@ let payFees = async (id) => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data) 
   });
-  location.href="index.html";
+alert("Payment Successfull")
+  // location.href="student.html";
+};
+
+// for Admin Panel 
+// for students comple data
+let fetchAdmin = async()=>{
+  let url='http://localhost:3000/Students'
+  let res=await fetch(url, {method:"GET"})
+  let data = await res.json()
+  console.log(data);
+  paginationn(data)
+}
+// for search by details 
+let searchh=async()=>{
+  let searchInp=document.querySelector("#searchInp").value.toLowerCase().trim();
+  let url= 'http://localhost:3000/Students';
+  let res= await fetch(url,{ method:"GET"})
+    let data = await res.json()
+    let filterData=data.filter((e)=>{
+    return e.name.toLowerCase().includes(searchInp) || e.number.toLowerCase().includes(searchInp)|| e.class.toString().includes(searchInp)
+  })
+    paginationn(filterData)
+}
+let paginationn=(data)=>{
+  $('#pagin').pagination({
+    dataSource: data,
+    pageSize: 5,
+    showSizeChanger: true,
+    callback: function(data, pagination) {
+      dataSo(data)
+    }
+})
+}
+let dataSo=(data)=>{
+let show=document.querySelector("#studentData")
+show.innerHTML=""
+data.map((e)=>{
+    show.innerHTML +=`
+    <tr class="row">
+        <td>${e.name}</td>
+        <td>${e.class}</td>
+        <td>${e.section}</td>
+        <td>${e.number}</td>
+        <td>${e.rollNo}</td>
+        <td>${e.id}</td>
+        <td>${e.totalFees}</td>
+        <td>${e.feesPaid ? "✅ Paid" : "❌ Not Paid"}</td>
+        <td onclick="condel('${e.id}')" class="cancel-button">Cancel</td>
+        
+    </tr> `
+})
+};
+let del =(id)=>{
+  let url = `http://localhost:3000/Students/${id}`
+  fetch(url, {method: "DELETE"})
+}
+
+// alert script library 
+let condel=(id)=>{
+Swal.fire({
+  title: "Are you sure?",
+  text: "This cannot be undone, proceed carefully!",
+  icon: "warning",
+  showCancelButton: true,
+  confirmButtonColor: "#3085d6",
+  cancelButtonColor: "#d33",
+  confirmButtonText: "Yes, delete it!",
+  
+}).then((result) => {
+  if (result.isConfirmed) {
+    del(id)
+    Swal.fire({
+      title: "Deleted!",
+      text: "Your file has been deleted.",
+      icon: "success"
+    });
+  }
+});
+}
+
+
+// admission 
+let admission = () => {
+  let adname = document.querySelector('#adname').value;
+  let adphone = document.querySelector('#adphone').value;
+  let adclass = document.querySelector('#adclass').value;
+  let adsection = document.querySelector('#adsection').value;
+  let adRollNo = document.querySelector('#adRollNo').value;
+
+  // Fees structure object
+  const fees = {
+    "9th": {
+      tution: 5000,
+      library: 1500,
+      exam: 800
+    },
+    "10th": {
+      tution: 7500,
+      library: 2000,
+      exam: 1000
+    },
+    "11th": {
+      "tution": 7000,
+      "library": 2500,
+      "exam": 1200
+    },
+    "12th": {
+      "tution": 8000,
+      "library": 3000,
+      "exam": 1500
+    }
+  };
+
+  // Input validation
+  if (adname === '' || adclass === '' || adsection === '' || adRollNo === '') {
+    alert("Enter All Details");
+    return false;
+  } 
+  if (adphone === "" || isNaN(adphone) || adphone.length !== 10) {
+    alert("Enter a Correct Mobile Number");
+    return false;
+  }
+
+  // Access fees based on the selected class
+  const classFees = fees[adclass];
+
+  // Calculate total fees for the selected class
+  const totalFees = Object.values(classFees).reduce((sum, fee) => sum + fee, 0);
+
+  // Save student data in localStorage (optional)
+  localStorage.setItem("name", adname);
+  localStorage.setItem("class", adclass);
+  localStorage.setItem("section", adsection);
+  localStorage.setItem("rollNo", adRollNo);
+  localStorage.setItem("number", adphone);
+
+  // Save student data in the database
+  const url = 'http://localhost:3000/Students'; 
+  fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      name: adname,
+      class: adclass,
+      section: adsection,
+      rollNo: adRollNo,
+      number: adphone,
+      fees: classFees,
+      totalFees: totalFees,
+    }),
+  })
+location.href="admin.html";
+alert("Successful")
+
+  return false; // Prevent page refresh
 };
