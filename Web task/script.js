@@ -20,6 +20,10 @@ let checkUser=()=> {
   alert("Access granted! Redirecting to the Student's Data page.");
   location.href = "student.html";
 }
+let home=()=> {
+  alert("Access granted! Redirecting to the Home page.");
+  location.href = "index.html";
+}
 
 
 // for search by details 

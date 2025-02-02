@@ -1,127 +1,11 @@
 {
   "Students": [
     {
-      "name": "Shradha",
-      "number": "7909348483",
-      "class": "10th",
-      "section": "A",
-      "rollNo": 1002,
-      "feesPaid": true,
-      "id": "828a",
-      "tution": 6000,
-      "library": 500,
-      "exam": 1000
-    },
-    {
-      "name": "Sushant",
-      "number": "7909348483",
-      "class": "11th",
-      "section": "A",
-      "rollNo": 1101,
-      "feesPaid": true,
-      "id": "157f",
-      "tution": 8000,
-      "library": 700,
-      "exam": 1300
-    },
-    {
-      "name": "Supriti",
-      "number": "7909348483",
-      "class": "11th",
-      "section": "B",
-      "rollNo": 1102,
-      "feesPaid": true,
-      "id": "1485",
-      "tution": 8000,
-      "library": 700,
-      "exam": 1300
-    },
-    {
-      "name": "Rohit",
-      "number": "7909348483",
-      "class": "11th",
-      "section": "A",
-      "rollNo": 1103,
-      "feesPaid": true,
-      "id": "e133",
-      "tution": 8000,
-      "library": 700,
-      "exam": 1300
-    },
-    {
-      "name": "Vikas",
-      "number": "7909348483",
-      "class": "12th",
-      "section": "B",
-      "rollNo": 1201,
-      "feesPaid": false,
-      "id": "5f34",
-      "tution": 10000,
-      "library": 1000,
-      "exam": 1500
-    },
-    {
-      "name": "Neetu",
-      "number": "7909348483",
-      "class": "12th",
-      "section": "A",
-      "rollNo": 1202,
-      "feesPaid": false,
-      "id": "9436",
-      "tution": 10000,
-      "library": 1000,
-      "exam": 1500
-    },
-    {
-      "name": "Indrajeet",
-      "number": "7909348483",
-      "class": "12th",
-      "section": "B",
-      "rollNo": 1203,
-      "feesPaid": false,
-      "id": "a303",
-      "tution": 10000,
-      "library": 1000,
-      "exam": 1500
-    },
-    {
-      "id": "068f",
+      "id": "ac89",
       "name": "Himanshu",
-      "class": "9th",
-      "section": "A",
-      "rollNo": "0",
-      "number": "7909348483",
-      "Price": 250
-    },
-    {
-      "id": "21f7",
-      "name": "Himanshu",
-      "class": "9th",
-      "section": "A",
-      "rollNo": "0",
-      "number": "7909348483",
-      "Price": 250
-    },
-    {
-      "id": "077f",
-      "name": "Himanshu",
-      "class": "9th",
-      "section": "A",
-      "rollNo": "0",
-      "number": "7909348483",
-      "fees": {
-        "tution": 5000,
-        "library": 1500,
-        "exam": 800
-      },
-      "totalFees": 7300
-    },
-    {
-      "id": "d3b3",
-      "name": "Rohit",
       "class": "12th",
       "section": "A",
-      "rollNo": "00",
+      "rollNo": "1201",
       "number": "7909348483",
       "fees": {
         "tution": 8000,
@@ -131,12 +15,27 @@
       "totalFees": 12500
     },
     {
-      "id": "0d54",
+      "id": "6190",
       "name": "Rohit",
-      "class": "11th",
+      "class": "12th",
       "section": "B",
-      "rollNo": "21q34",
-      "number": "7909348483",
+      "rollNo": "1202",
+      "number": "9584846705",
+      "fees": {
+        "tution": 8000,
+        "library": 3000,
+        "exam": 1500
+      },
+      "totalFees": 12500,
+      "feesPaid": true
+    },
+    {
+      "id": "74d1",
+      "name": "Neetu",
+      "class": "11th",
+      "section": "A",
+      "rollNo": "1101",
+      "number": "9285550000",
       "fees": {
         "tution": 7000,
         "library": 2500,
@@ -145,141 +44,26 @@
       "totalFees": 10700
     },
     {
-      "id": "5645",
-      "name": "Rohit",
-      "class": "9th",
-      "section": "B",
-      "rollNo": "21q34",
-      "number": "7909348483",
-      "fees": {
-        "tution": 5000,
-        "library": 1500,
-        "exam": 800
-      },
-      "totalFees": 7300
-    },
-    {
-      "id": "4573",
-      "name": "Rohit",
-      "class": "10th",
-      "section": "A",
-      "rollNo": "21q34",
-      "number": "7909348483",
-      "fees": {
-        "tution": 7500,
-        "library": 2000,
-        "exam": 1000
-      },
-      "totalFees": 10500
-    },
-    {
-      "id": "4e70",
-      "name": "Himanshu",
+      "id": "4e6a",
+      "name": "Vishnukant",
       "class": "11th",
       "section": "B",
-      "rollNo": null,
-      "number": "7909348483",
+      "rollNo": "1102",
+      "number": "9755000000",
       "fees": {
         "tution": 7000,
         "library": 2500,
         "exam": 1200
       },
-      "totalFees": 10700,
-      "feesPaid": false
+      "totalFees": 10700
     },
     {
-      "id": "0308",
-      "name": "Himanshu",
+      "id": "cc44",
+      "name": "Aarya",
       "class": "9th",
-      "section": "A",
-      "rollNo": "21q34",
-      "number": "7909348483",
-      "fees": {
-        "tution": 5000,
-        "library": 1500,
-        "exam": 800
-      },
-      "totalFees": 7300
-    },
-    {
-      "id": "86d4",
-      "name": "Rohit",
-      "class": "9th",
-      "section": "A",
-      "rollNo": "0",
-      "number": "7909348483",
-      "fees": {
-        "tution": 5000,
-        "library": 1500,
-        "exam": 800
-      },
-      "totalFees": 7300
-    },
-    {
-      "id": "382c",
-      "name": "Rohit",
-      "class": "9th",
-      "section": "A",
-      "rollNo": "0",
-      "number": "7909348483",
-      "fees": {
-        "tution": 5000,
-        "library": 1500,
-        "exam": 800
-      },
-      "totalFees": 7300,
-      "feesPaid": true
-    },
-    {
-      "id": "c6d8",
-      "name": "Himanshu",
-      "class": "10th",
       "section": "B",
-      "rollNo": "21q34",
-      "number": "7909348483",
-      "fees": {
-        "tution": 7500,
-        "library": 2000,
-        "exam": 1000
-      },
-      "totalFees": 10500
-    },
-    {
-      "id": "d1a4",
-      "name": "Himanshu",
-      "class": "10th",
-      "section": "B",
-      "rollNo": "21q34",
-      "number": "7909348483",
-      "fees": {
-        "tution": 7500,
-        "library": 2000,
-        "exam": 1000
-      },
-      "totalFees": 10500
-    },
-    {
-      "id": "1ec3",
-      "name": "Himanshu",
-      "class": "9th",
-      "section": "A",
-      "rollNo": "0",
-      "number": "7909348483",
-      "fees": {
-        "tution": 5000,
-        "library": 1500,
-        "exam": 800
-      },
-      "totalFees": 7300,
-      "feesPaid": true
-    },
-    {
-      "id": "e282",
-      "name": "AARYA",
-      "class": "9th",
-      "section": "A",
-      "rollNo": "900",
-      "number": "1234567890",
+      "rollNo": "901",
+      "number": "1234000000",
       "fees": {
         "tution": 5000,
         "library": 1500,
@@ -288,26 +72,12 @@
       "totalFees": 7300
     },
     {
-      "id": "2afb",
-      "name": "AARYA",
-      "class": "9th",
-      "section": "A",
-      "rollNo": "900",
-      "number": "1234567890",
-      "fees": {
-        "tution": 5000,
-        "library": 1500,
-        "exam": 800
-      },
-      "totalFees": 7300
-    },
-    {
-      "id": "02df",
+      "id": "aec2",
       "name": "Dhruv",
       "class": "9th",
       "section": "A",
-      "rollNo": "901",
-      "number": "1324567890",
+      "rollNo": "902",
+      "number": "1234567890",
       "fees": {
         "tution": 5000,
         "library": 1500,
@@ -315,6 +85,48 @@
       },
       "totalFees": 7300,
       "feesPaid": true
+    },
+    {
+      "id": "139b",
+      "name": "Jatin",
+      "class": "10th",
+      "section": "A",
+      "rollNo": "1001",
+      "number": "1234567800",
+      "fees": {
+        "tution": 7500,
+        "library": 2000,
+        "exam": 1000
+      },
+      "totalFees": 10500
+    },
+    {
+      "id": "0bc6",
+      "name": "Vijay",
+      "class": "10th",
+      "section": "B",
+      "rollNo": "1002",
+      "number": "1234567000",
+      "fees": {
+        "tution": 7500,
+        "library": 2000,
+        "exam": 1000
+      },
+      "totalFees": 10500
+    },
+    {
+      "id": "035e",
+      "name": "Yash",
+      "class": "10th",
+      "section": "A",
+      "rollNo": "1003",
+      "number": "1234560000",
+      "fees": {
+        "tution": 7500,
+        "library": 2000,
+        "exam": 1000
+      },
+      "totalFees": 10500
     }
   ]
 }
