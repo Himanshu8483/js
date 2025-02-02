@@ -4,7 +4,7 @@ let checkAdmin=()=> {
   let userInput = prompt("Enter the admin password:");
   
   if (userInput === adminPassword) {
-      alert("Access granted! Redirecting to the Student's Data page.");
+    alert("Access granted! You will be redirected to the Admin Data page.");
       location.href = "admin.html"; // Change this to the actual admission page URL
   } else {
     Swal.fire({
@@ -17,15 +17,15 @@ let checkAdmin=()=> {
   }
 }
 let checkUser=()=> {
-  alert("Access granted! Redirecting to the Student's Data page.");
+  alert("Access granted! You will be redirected to the Student Data page.");
   location.href = "student.html";
 }
 let admissions=()=> {
-  alert("Access granted! Redirecting to the Admission form.");
+  alert("Access granted! You will be redirected to the Admission Form.");
   location.href = "admission.html";
 }
 let home=()=> {
-  alert("Access granted! Redirecting to the Home page.");
+  alert("Access granted! You will be redirected to the Home page.");
   location.href = "index.html";
 }
 
