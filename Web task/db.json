@@ -13,18 +13,6 @@
       "exam": 1000
     },
     {
-      "name": "Dhruv",
-      "number": "7909348483",
-      "class": "10th",
-      "section": "B",
-      "rollNo": 1003,
-      "feesPaid": true,
-      "id": "d311",
-      "tution": 6000,
-      "library": 500,
-      "exam": 1000
-    },
-    {
       "name": "Sushant",
       "number": "7909348483",
       "class": "11th",
@@ -312,6 +300,21 @@
         "exam": 800
       },
       "totalFees": 7300
+    },
+    {
+      "id": "02df",
+      "name": "Dhruv",
+      "class": "9th",
+      "section": "A",
+      "rollNo": "901",
+      "number": "1324567890",
+      "fees": {
+        "tution": 5000,
+        "library": 1500,
+        "exam": 800
+      },
+      "totalFees": 7300,
+      "feesPaid": true
     }
   ]
 }

@@ -5,7 +5,136 @@ body {
     padding: 0;
     text-align: center;
   }
+  /* index html home section part  */
+
+#navbar{
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background-color: #0c5d69;
+  height: 90px;
+}
+
+#navbar ul{
+  display: flex;
+  gap: 50px;
+  list-style: none;
+}
+#navbar ul button{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-size: 20px;
+  position: fixed;
+  z-index:2;
+  top: 25px;;
+  /* left: 0; */
+}
+#navbar ul #btn2{
+  right: 20px;
+}
+#navbar ul #btn1{
+  left: 20px;
+}
+
+#navbar .navbar-logo a {
+  color: white;
+  font-family: cursive;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 80px;
+}
+
+#navbar .navbar-logo a span {
+  color: brown;
+  font-size: 150%;
+  font-weight: 600;
+}
+
+/* section 1  */
+#sec1 {
+  height: 100vh;
+  width: 100%;  
+  background-image: url(img/school.png);
+  background-size: cover;
+  /* animation: animee 30s linear infinite; */
+}
+
+/* 
+@keyframes animee {
+  0%{
+    background-image: url(img/book.png);
+    background-size: cover;
+  }
+  20%{
+    background-image: url(img/group.png);
+    background-size: cover;
+  }
+  40%{
+    background-image: url(img/school.jpg);
+    background-size: cover;
+  }
+  60%{
+    background-image: url(img/school.png);
+    background-size: cover;
+  }
+  80%{
+    background-image: url(img/students.png);
+    background-size: cover;
+  }
+  100%{
+    background-image: url(img/student.png);
+    background-size: cover;
+  }
+   */
+
+#sec1 .overlay{
+  padding-top: 10px;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(#000000d8, #003b45c3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+
+}
+#sec1 .overlay span{
+  color: white;
+  padding: 100px;
+  font-weight: 900;
+  font-size: 70px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+}
+#sec1 .overlay span button{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  font-size: 50px;
+  border-radius: 5px;
+  /* padding: 10px; */
+  font-weight: 600;
+  position: absolute;
+  bottom: 60px;
+  right: 37%;
   
+}
+
+
+
+
+/* =========================== */
+footer{
+  height: 60px;
+  background-color: #0c5d69;
+color: white;
+line-height: 60px;
+background-size: contain;
+}
+/* =========================== */
+
+
+  /* others===============================f */
   h1 {
     background-color: #0c5d69;
     color: white;

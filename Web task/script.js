@@ -1,3 +1,27 @@
+// Admin Security 
+let checkAdmin=()=> {
+  const adminPassword = "admin123"; // Set your admin password here
+  let userInput = prompt("Enter the admin password:");
+  
+  if (userInput === adminPassword) {
+      alert("Access granted! Redirecting to the admission page.");
+      window.location.href = "admission.html"; // Change this to the actual admission page URL
+  } else {
+    Swal.fire({
+      title: "Invalid Data!",
+      text: "Authentication Failed. Please Enter the Correct Admin Password",
+      icon: "warning",
+      confirmButtonColor: "#0c5d69",
+      confirmButtonText: "Understood",
+    })
+  }
+}
+let checkUser=()=> {
+  alert("Access granted! Redirecting to the Student's Data page.");
+  location.href = "student.html";
+}
+
+
 // for search by details 
 let searchStudent = async()=>{
   let searchName=document.querySelector("#name").value.toLowerCase().trim();
@@ -81,8 +105,7 @@ alert("Payment Successfull")
   // location.href="student.html";
 };
 
-// for Admin Panel 
-// for students comple data
+// for Admin Panel to show all data
 let fetchAdmin = async()=>{
   let url='http://localhost:3000/Students'
   let res=await fetch(url, {method:"GET"})
