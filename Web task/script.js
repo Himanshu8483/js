@@ -152,11 +152,92 @@ data.map((e)=>{
         <td>${e.id}</td>
         <td>${e.totalFees}</td>
         <td>${e.feesPaid ? "✅ Paid" : "❌ Not Paid"}</td>
+        <td onclick="return formFill('${e.id}')">Edit</td>
         <td onclick="condel('${e.id}')" class="cancel-button">Cancel</td>
         
     </tr> `
 })
 };
+
+let formFill= async(id)=> {
+  let url = `http://localhost:3000/Students/${id}`
+  
+  let res = await fetch(url,{method:"GET"})
+  let data = await res.json()
+  let formData=`
+  
+    <div class="group">
+      <label for="class">Select Class:</label>
+      <select id="class">
+        <option value="">Select Class</option>
+        <option value="9">Class 9th</option>
+        <option value="10">Class 10th</option>
+        <option value="11">Class 11th</option>
+        <option value="12">Class 12th</option>
+      </select>
+    </div>
+    <div class="group">
+      <label for="section">Select Section:</label>
+      <select id="section">
+        <option value="">Section</option>
+        <option value="A">Section A</option>
+        <option value="B">Section B</option>
+      </select>
+    </div>
+    <div class="group">
+      <label for="name">Student's Name:</label>
+      <input type="text" value="${data.name}"  placeholder="Name" id="name">
+    </div>
+    <div class="group">
+      <label for="number">Mobile Number:</label>
+      <input type="number" value="${data.number}"  placeholder="Mobile Number" id="number">
+    </div>
+    <div class="group">
+      <label for="rollNo">Roll Number:</label>
+      <input type="number" value="${data.rollNo}"  placeholder="Roll Number" id="rollNo">
+    </div>
+    <div class="group">
+      <label for="totalFees">Total Fees:</label>
+      <input type="number" value="${data.totalFees}"  placeholder="Total Fees" id="totalFees">
+    </div>
+
+      <button onclick="updatee('${data.id}')">Update</button>
+  `
+  document.querySelector("#content").innerHTML=formData
+  }
+  
+let updatee=(id)=>{
+  console.log("Student ID:", id);  // Debugging line
+
+let searchName=document.querySelector("#name").value.toLowerCase().trim();
+let searchRollNo=document.querySelector("#rollNo").value.toLowerCase().toString().trim()
+let searchClass = document.querySelector("#class").value;
+let searchSection = document.querySelector("#section").value;
+let searchNumber = document.querySelector("#number").value.toLowerCase().toString().trim();
+let searchTotalFees = document.querySelector("#totalFees").value.toLowerCase().toString().trim();
+
+let url = `http://localhost:3000/Students/${id}`
+
+fetch(url,{
+  method:"PUT",
+  headers:{
+    "Content-Type":"application/json",
+  },
+  body:JSON.stringify(
+    {
+      name:searchName,
+      class:searchClass,
+      section:searchSection,
+      number:searchNumber,
+      rollNo:searchRollNo,
+      totalFees:searchTotalFees,
+      
+    }
+  )
+})
+return false;
+}
+
 let del =(id)=>{
   let url = `http://localhost:3000/Students/${id}`
   fetch(url, {method: "DELETE"})

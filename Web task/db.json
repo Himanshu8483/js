@@ -15,19 +15,13 @@
       "totalFees": 12500
     },
     {
-      "id": "6190",
-      "name": "Rohit",
-      "class": "12th",
-      "section": "B",
-      "rollNo": "1202",
+      "name": "rohit",
+      "class": "",
+      "section": "",
       "number": "9584846705",
-      "fees": {
-        "tution": 8000,
-        "library": 3000,
-        "exam": 1500
-      },
-      "totalFees": 12500,
-      "feesPaid": true
+      "rollNo": "1202",
+      "totalFees": "12500",
+      "id": "6190"
     },
     {
       "id": "74d1",
