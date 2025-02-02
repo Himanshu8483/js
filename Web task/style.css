@@ -237,22 +237,7 @@ background-size: contain;
   .payColumn{
     width: 100px;
   }
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    h1{
-        width: 100%;
-    }
-    .container {
-      width: 95%;
-    }
-    td, th {
-      width: 100%;
-    }
-    tr {
-        display: flex;
-      flex-direction: column;
-    }
-  }
+
   
 
   /* pagination  */

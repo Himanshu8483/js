@@ -23,4 +23,18 @@ right: 30%;
     background-size: cover;
     zoom: 1;
 }
+  /* Responsive Design */
+    h1{
+        width: 100%;
+    }
+    .container {
+      width: 95%;
+    }
+    td, th {
+      width: 100%;
+    }
+    tr {
+        display: flex;
+      flex-direction: column;
+    }
 }

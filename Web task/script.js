@@ -4,8 +4,8 @@ let checkAdmin=()=> {
   let userInput = prompt("Enter the admin password:");
   
   if (userInput === adminPassword) {
-      alert("Access granted! Redirecting to the admission page.");
-      window.location.href = "admission.html"; // Change this to the actual admission page URL
+      alert("Access granted! Redirecting to the Student's Data page.");
+      location.href = "admin.html"; // Change this to the actual admission page URL
   } else {
     Swal.fire({
       title: "Invalid Data!",
@@ -20,6 +20,10 @@ let checkUser=()=> {
   alert("Access granted! Redirecting to the Student's Data page.");
   location.href = "student.html";
 }
+let admissions=()=> {
+  alert("Access granted! Redirecting to the Admission form.");
+  location.href = "admission.html";
+}
 let home=()=> {
   alert("Access granted! Redirecting to the Home page.");
   location.href = "index.html";
@@ -28,10 +32,10 @@ let home=()=> {
 
 // for search by details 
 let searchStudent = async()=>{
-  let searchName=document.querySelector("#name").value.toLowerCase().trim();
+  let searchName=document.querySelector("#name").value.toUpperCase().trim();
   let searchRoll=document.querySelector("#rollNo").value.toString().trim();
   let searchNumber=document.querySelector("#number").value.toString().trim();
-  let searchId=document.querySelector("#inpId").value.toLowerCase().toString().trim()
+  let searchId=document.querySelector("#inpId").value.toUpperCase().toString().trim()
   let searchClass = document.querySelector("#class").value;
   let searchSection = document.querySelector("#section").value;
   let table = document.querySelector("#studentTab");
@@ -41,8 +45,8 @@ let searchStudent = async()=>{
 
   let filterData=data.filter((e)=>{
     return (
-      (e.name.toLowerCase().includes(searchName)) &&
-      (e.id.toString().toLowerCase().trim() === searchId) &&
+      (e.name.toUpperCase().includes(searchName)) &&
+      (e.id.toString().toUpperCase().trim() === searchId) &&
       (e.rollNo.toString().trim() == searchRoll) &&
       (e.number.toString().trim() == searchNumber) &&
       (e.class === searchClass) &&
@@ -119,12 +123,12 @@ let fetchAdmin = async()=>{
 }
 // for search by details 
 let searchh=async()=>{
-  let searchInp=document.querySelector("#searchInp").value.toLowerCase().trim();
+  let searchInp=document.querySelector("#searchInp").value.toUpperCase().trim();
   let url= 'http://localhost:3000/Students';
   let res= await fetch(url,{ method:"GET"})
     let data = await res.json()
     let filterData=data.filter((e)=>{
-    return e.name.toLowerCase().includes(searchInp) || e.number.toLowerCase().includes(searchInp)|| e.class.toString().includes(searchInp)
+    return e.name.toUpperCase().includes(searchInp) || e.number.toUpperCase().includes(searchInp)|| e.class.toString().includes(searchInp)
   })
     paginationn(filterData)
 }
@@ -164,16 +168,16 @@ let formFill= async(id)=> {
   
   let res = await fetch(url,{method:"GET"})
   let data = await res.json()
-  let formData=`
+  let form=`
   
     <div class="group">
       <label for="class">Select Class:</label>
       <select id="class">
         <option value="">Select Class</option>
-        <option value="9">Class 9th</option>
-        <option value="10">Class 10th</option>
-        <option value="11">Class 11th</option>
-        <option value="12">Class 12th</option>
+        <option value="9th">Class 9th</option>
+        <option value="10th">Class 10th</option>
+        <option value="11th">Class 11th</option>
+        <option value="12th">Class 12th</option>
       </select>
     </div>
     <div class="group">
@@ -203,18 +207,18 @@ let formFill= async(id)=> {
 
       <button onclick="updatee('${data.id}')">Update</button>
   `
-  document.querySelector("#content").innerHTML=formData
+  document.querySelector("#contentt").innerHTML=form
   }
   
 let updatee=(id)=>{
   console.log("Student ID:", id);  // Debugging line
 
-let searchName=document.querySelector("#name").value.toLowerCase().trim();
-let searchRollNo=document.querySelector("#rollNo").value.toLowerCase().toString().trim()
+let searchName=document.querySelector("#name").value.toUpperCase().trim();
+let searchRollNo=document.querySelector("#rollNo").value.toUpperCase().toString().trim()
 let searchClass = document.querySelector("#class").value;
 let searchSection = document.querySelector("#section").value;
-let searchNumber = document.querySelector("#number").value.toLowerCase().toString().trim();
-let searchTotalFees = document.querySelector("#totalFees").value.toLowerCase().toString().trim();
+let searchNumber = document.querySelector("#number").value.toUpperCase().toString().trim();
+let searchTotalFees = document.querySelector("#totalFees").value.toUpperCase().toString().trim();
 
 let url = `http://localhost:3000/Students/${id}`
 
