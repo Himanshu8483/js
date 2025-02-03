@@ -200,46 +200,50 @@ let formFill= async(id)=> {
       <label for="rollNo">Roll Number:</label>
       <input type="number" value="${data.rollNo}"  placeholder="Roll Number" id="rollNo">
     </div>
-    <div class="group">
-      <label for="totalFees">Total Fees:</label>
-      <input type="number" value="${data.totalFees}" readonly placeholder="Total Fees" id="totalFees">
-    </div>
 
       <button onclick="updatee('${data.id}')">Update</button>
   `
   document.querySelector("#contentt").innerHTML=form
   }
   
-let updatee=(id)=>{
-  console.log("Student ID:", id);  // Debugging line
-
+  let updatee = async (id) => {
+    console.log("Updating Student ID:", id);  // Debugging line
+  
 let searchName=document.querySelector("#name").value.toUpperCase().trim();
 let searchRollNo=document.querySelector("#rollNo").value.toUpperCase().toString().trim()
 let searchClass = document.querySelector("#class").value;
 let searchSection = document.querySelector("#section").value;
 let searchNumber = document.querySelector("#number").value.toUpperCase().toString().trim();
-let searchTotalFees = document.querySelector("#totalFees").value.toUpperCase().toString().trim();
 
-let url = `http://localhost:3000/Students/${id}`
+  let url = `http://localhost:3000/Students/${id}`;
+  
+  // Fetch the existing student data first
+  let res = await fetch(url, { method: "GET" });
+  let existingData = await res.json();
 
-fetch(url,{
-  method:"PUT",
-  headers:{
-    "Content-Type":"application/json",
-  },
-  body:JSON.stringify(
-    {
-      name:searchName,
-      class:searchClass,
-      section:searchSection,
-      number:searchNumber,
-      rollNo:searchRollNo,
-      totalFees:searchTotalFees,
-    }
-  )
-})
-return false;
-}
+  // Keep previous fees and feesPaid status
+  let updatedData = {
+    name: searchName,
+    class: searchClass,
+    section: searchSection,
+    number: searchNumber,
+    rollNo: searchRollNo,
+    totalFees: existingData.totalFees,  // Keep total fees
+    fees: existingData.fees,  // Keep existing fee breakdown
+    feesPaid: existingData.feesPaid  // Keep previous payment status
+  };
+
+  // Send update request
+  await fetch(url, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(updatedData)
+  });
+
+  alert("Student Data Updated Successfully!");
+  return false;
+};
+
 
 let del =(id)=>{
   let url = `http://localhost:3000/Students/${id}`
@@ -348,3 +352,7 @@ alert("Successful")
 
   return false; // Prevent page refresh
 };
+
+
+// note my work
+// I cannot generate sequence wise roll no it's manually and i cannot make classes by admin dynamically add other classes and sections

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Receipt</title>
+    <script src="receipt.js" defer></script>
+    <link rel="stylesheet" href="styles.css"> <!-- Optional: Add styling -->
+</head>
+<body>
+    <div class="receipt-container">
+        <h2>Student Admission Receipt</h2>
+        <p><strong>Name:</strong> <span id="studentName"></span></p>
+        <p><strong>Class:</strong> <span id="studentClass"></span></p>
+        <p><strong>Section:</strong> <span id="studentSection"></span></p>
+        <p><strong>Roll Number:</strong> <span id="studentRoll"></span></p>
+        <p><strong>Student ID:</strong> <span id="studentId"></span></p>
+        <p><strong>Total Fees:</strong> ₹<span id="totalFees"></span></p>
+        <p><strong>Fees Paid:</strong> <span id="feesPaid"></span></p>
+        <button onclick="window.print()">Print Receipt</button>
+        <button onclick="window.location.href='admin.html'">Back to Dashboard</button>
+    </div>
+
+    <script>
+        // Function to get student ID from URL
+const getStudentIdFromUrl = () => {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('id');
+};
+
+// Fetch student details and display the receipt
+const fetchStudentReceipt = async () => {
+    const studentId = getStudentIdFromUrl();
+    if (!studentId) {
+        alert("Invalid Student ID");
+        return;
+    }
+
+    const url = `http://localhost:3000/Students/${studentId}`;
+    const res = await fetch(url);
+    const student = await res.json();
+
+    // Fill in the receipt details
+    document.getElementById('studentName').innerText = student.name;
+    document.getElementById('studentClass').innerText = student.class;
+    document.getElementById('studentSection').innerText = student.section;
+    document.getElementById('studentRoll').innerText = student.rollNo;
+    document.getElementById('studentId').innerText = studentId;
+    document.getElementById('totalFees').innerText = student.totalFees;
+    document.getElementById('feesPaid').innerText = student.feesPaid ? "✅ Paid" : "❌ Not Paid";
+};
+
+// Call function when page loads
+window.onload = fetchStudentReceipt;
+
+    </script>
+</body>
+
+</html>

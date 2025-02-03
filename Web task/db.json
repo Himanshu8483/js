@@ -1,33 +1,18 @@
 {
   "Students": [
     {
-      "name": "HIMANSHU",
-      "class": "11th",
-      "section": "A",
-      "number": "7909348483",
-      "rollNo": "1201",
-      "totalFees": "12500",
-      "fees": {
-        "tution": 8000,
-        "library": 3000,
-        "exam": 1500
-      },
-      "feesPaid": true,
-      "id": "ac89"
-    },
-    {
       "name": "NEETU",
       "class": "11th",
       "section": "A",
       "number": "9285550000",
       "rollNo": "1101",
       "totalFees": "10700",
-      "feesPaid": true,
       "fees": {
         "tution": 7000,
         "library": 3000,
         "exam": 1500
       },
+      "feesPaid": true,
       "id": "74d1"
     },
     {
@@ -61,19 +46,19 @@
       "totalFees": 7300
     },
     {
-      "id": "035e",
-      "name": "Yash",
+      "name": "YASH",
       "class": "10th",
       "section": "A",
-      "rollNo": "1003",
-      "feesPaid": false,
       "number": "1234560000",
+      "rollNo": "1003",
+      "totalFees": 10500,
       "fees": {
         "tution": 7500,
         "library": 2000,
         "exam": 1000
       },
-      "totalFees": 10500
+      "feesPaid": false,
+      "id": "035e"
     },
     {
       "id": "4bf9",
@@ -119,6 +104,51 @@
       },
       "totalFees": 12500,
       "feesPaid": true
+    },
+    {
+      "name": "HIMANSHU",
+      "class": "12th",
+      "section": "B",
+      "number": "7909348483",
+      "rollNo": "1210",
+      "totalFees": 12500,
+      "fees": {
+        "tution": 8000,
+        "library": 3000,
+        "exam": 1500
+      },
+      "feesPaid": true,
+      "id": "907b"
+    },
+    {
+      "id": "9d88",
+      "name": "mukul",
+      "class": "9th",
+      "section": "B",
+      "rollNo": "b4ad",
+      "number": "7909348483",
+      "fees": {
+        "tution": 5000,
+        "library": 1500,
+        "exam": 800
+      },
+      "totalFees": 7300,
+      "feesPaid": true
+    },
+    {
+      "name": "ROHIT",
+      "class": "9th",
+      "section": "B",
+      "number": "9584846705",
+      "rollNo": "902",
+      "totalFees": 7300,
+      "fees": {
+        "tution": 5000,
+        "library": 1500,
+        "exam": 800
+      },
+      "feesPaid": true,
+      "id": "9a61"
     }
   ]
 }
