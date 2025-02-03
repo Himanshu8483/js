@@ -235,7 +235,6 @@ fetch(url,{
       number:searchNumber,
       rollNo:searchRollNo,
       totalFees:searchTotalFees,
-      
     }
   )
 })

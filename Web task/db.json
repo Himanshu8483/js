@@ -2,7 +2,7 @@
   "Students": [
     {
       "name": "HIMANSHU",
-      "class": "12th",
+      "class": "11th",
       "section": "A",
       "number": "7909348483",
       "rollNo": "1201",
@@ -12,8 +12,8 @@
         "library": 3000,
         "exam": 1500
       },
-      "id": "ac89",
-      "feesPaid": true
+      "feesPaid": true,
+      "id": "ac89"
     },
     {
       "name": "NEETU",
@@ -22,6 +22,7 @@
       "number": "9285550000",
       "rollNo": "1101",
       "totalFees": "10700",
+      "feesPaid": true,
       "fees": {
         "tution": 7000,
         "library": 3000,
@@ -36,6 +37,7 @@
       "number": "9755000000",
       "rollNo": "1102",
       "totalFees": "10700",
+      "feesPaid": true,
       "fees": {
         "tution": 7000,
         "library": 3000,
