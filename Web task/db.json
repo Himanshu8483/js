@@ -7,7 +7,13 @@
       "number": "7909348483",
       "rollNo": "1201",
       "totalFees": "12500",
-      "id": "ac89"
+      "fees": {
+        "tution": 8000,
+        "library": 3000,
+        "exam": 1500
+      },
+      "id": "ac89",
+      "feesPaid": true
     },
     {
       "name": "NEETU",
@@ -16,22 +22,26 @@
       "number": "9285550000",
       "rollNo": "1101",
       "totalFees": "10700",
+      "fees": {
+        "tution": 7000,
+        "library": 3000,
+        "exam": 1500
+      },
       "id": "74d1"
     },
     {
-      "id": "4e6a",
-      "name": "Vishnukant",
+      "name": "VISHNUKANT",
       "class": "11th",
       "section": "B",
-      "rollNo": "1102",
-      "feesPaid": true,
       "number": "9755000000",
+      "rollNo": "1102",
+      "totalFees": "10700",
       "fees": {
         "tution": 7000,
-        "library": 2500,
-        "exam": 1200
+        "library": 3000,
+        "exam": 1500
       },
-      "totalFees": 10700
+      "id": "4e6a"
     },
     {
       "id": "cc44",
