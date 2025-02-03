@@ -16,15 +16,6 @@
       "feesPaid": true
     },
     {
-      "name": "ROHIT",
-      "class": "12th",
-      "section": "B",
-      "number": "9584846705",
-      "rollNo": "1202",
-      "totalFees": "12500",
-      "id": "6190"
-    },
-    {
       "id": "74d1",
       "name": "Neetu",
       "class": "11th",
@@ -36,7 +27,8 @@
         "library": 2500,
         "exam": 1200
       },
-      "totalFees": 10700
+      "totalFees": 10700,
+      "feesPaid": true
     },
     {
       "id": "4e6a",
@@ -138,13 +130,18 @@
       "totalFees": 10500
     },
     {
-      "name": "SHRADDHA",
-      "class": "9th",
+      "id": "7b8e",
+      "name": "Him",
+      "class": "12th",
       "section": "B",
-      "number": "1212121212",
-      "rollNo": "903",
-      "totalFees": "7300",
-      "id": "2dcf"
+      "rollNo": "1205",
+      "number": "7909348483",
+      "fees": {
+        "tution": 8000,
+        "library": 3000,
+        "exam": 1500
+      },
+      "totalFees": 12500
     }
   ]
 }

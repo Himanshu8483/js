@@ -292,14 +292,14 @@ let admission = () => {
       exam: 1000
     },
     "11th": {
-      "tution": 7000,
-      "library": 2500,
-      "exam": 1200
+      tution: 7000,
+      library: 2500,
+      exam: 1200
     },
     "12th": {
-      "tution": 8000,
-      "library": 3000,
-      "exam": 1500
+      tution: 8000,
+      library: 3000,
+      exam: 1500
     }
   };
 
