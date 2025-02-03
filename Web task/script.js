@@ -128,7 +128,7 @@ let searchh=async()=>{
   let res= await fetch(url,{ method:"GET"})
     let data = await res.json()
     let filterData=data.filter((e)=>{
-    return e.name.toUpperCase().includes(searchInp) || e.number.toUpperCase().includes(searchInp)|| e.class.toString().includes(searchInp)
+    return e.name.toUpperCase().includes(searchInp) || e.number.toUpperCase().includes(searchInp)|| e.class.toString().toUpperCase().includes(searchInp)
   })
     paginationn(filterData)
 }
@@ -341,6 +341,7 @@ let admission = () => {
       number: adphone,
       fees: classFees,
       totalFees: totalFees,
+      feesPaid:false,
     }),
   })
 location.href="admin.html";
